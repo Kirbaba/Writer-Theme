@@ -1,0 +1,38 @@
+.entry {
+	display: block;
+	width: 100%;
+	position: relative;
+	height: 750px;
+	background-image: url("../img/entry.png");
+	background-repeat: no-repeat;
+	background-position: 50% 0;
+	z-index: 0;
+	&__text {
+		position: absolute;
+		top: 225px;
+		width: 50%;
+		right: 5%;
+		color: #FFF;
+		h1 {			
+			font-size: 86px;
+			font-family: $bold;
+			text-align: right;
+			margin-bottom: 0;
+		}
+		h3 {
+			font-family: $light;
+			font-size: 52px;
+			text-align: right;
+			margin: 0 0 10px 0;
+		}
+		p {
+			margin: 0;
+			font-size: 28px;
+			font-family: $book;
+			span {
+				display: block;
+				font-size: 30px;
+			}
+		}
+	}
+}

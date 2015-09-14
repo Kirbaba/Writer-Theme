@@ -1,0 +1,24 @@
+.navigation {
+	float: right;
+	display: block;
+	margin-right: 5%;
+	ul {
+		list-style-type: none;
+		padding: 0;
+		transition: all .3s ease .15s;
+		display: inline-block;
+		li {
+			display: inline-block;
+			padding-left: 30px;
+			transition: all .3s ease .15s;
+			a {
+				text-transform: uppercase;
+				font-size: 24px;
+				font-family: $book;
+				font-weight: bold;
+				color: #FFF;			
+			}			
+		}
+	}
+}
+

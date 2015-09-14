@@ -1,0 +1,125 @@
+@font-face {
+  font-family: 'BebasNeue_Bold';
+  src: url("../fonts/BebasNeue_Bold.eot");
+  src: url("../fonts/BebasNeue_Bold.eot") format("embedded-opentype"), url("../fonts/BebasNeue_Bold.woff2") format("woff2"), url("../fonts/BebasNeue_Bold.woff") format("woff"), url("../fonts/BebasNeue_Bold.ttf") format("truetype"), url("../fonts/BebasNeue_Bold.svg#BebasNeue_Bold") format("svg"); }
+@font-face {
+  font-family: 'BebasNeue_Light';
+  src: url("../fonts/BebasNeue_Light.eot");
+  src: url("../fonts/BebasNeue_Light.eot") format("embedded-opentype"), url("../fonts/BebasNeue_Light.woff2") format("woff2"), url("../fonts/BebasNeue_Light.woff") format("woff"), url("../fonts/BebasNeue_Light.ttf") format("truetype"), url("../fonts/BebasNeue_Light.svg#BebasNeue_Light") format("svg"); }
+@font-face {
+  font-family: 'BebasNeue_Regular';
+  src: url("../fonts/BebasNeue_Regular.eot");
+  src: url("../fonts/BebasNeue_Regular.eot") format("embedded-opentype"), url("../fonts/BebasNeue_Regular.woff2") format("woff2"), url("../fonts/BebasNeue_Regular.woff") format("woff"), url("../fonts/BebasNeue_Regular.ttf") format("truetype"), url("../fonts/BebasNeue_Regular.svg#BebasNeue_Regular") format("svg"); }
+@font-face {
+  font-family: 'BebasNeue_Book';
+  src: url("../fonts/BebasNeue_Book.eot");
+  src: url("../fonts/BebasNeue_Book.eot") format("embedded-opentype"), url("../fonts/BebasNeue_Book.woff2") format("woff2"), url("../fonts/BebasNeue_Book.woff") format("woff"), url("../fonts/BebasNeue_Book.ttf") format("truetype"), url("../fonts/BebasNeue_Book.svg#BebasNeue_Book") format("svg"); }
+html {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  height: 100%; }
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  min-width: 1200px;
+  font-family: "BebasNeue_Regular"; }
+
+.contain {
+  width: 1170px;
+  display: block;
+  margin: 0 auto;
+  position: relative; }
+  .contain:before, .contain:after {
+    display: table;
+    content: " "; }
+  .contain:after {
+    clear: both; }
+
+a {
+  text-decoration: none; }
+  a:hover, a:focus, a:active {
+    outline: none; }
+
+ul {
+  list-style-type: none; }
+
+b {
+  font-family: "BebasNeue_Bold"; }
+
+.button-buy {
+  display: inline-block;
+  background-image: url("../img/marker20.png");
+  width: 25px;
+  height: 23px;
+  margin: 0 25px; }
+
+.button-search {
+  display: inline-block;
+  background-image: url("../img/magnifier13.png");
+  width: 23px;
+  height: 23px; }
+
+.navigation {
+  float: right;
+  display: block;
+  margin-right: 5%; }
+  .navigation ul {
+    list-style-type: none;
+    padding: 0;
+    transition: all .3s ease .15s;
+    display: inline-block; }
+    .navigation ul li {
+      display: inline-block;
+      padding-left: 30px;
+      transition: all .3s ease .15s; }
+      .navigation ul li a {
+        text-transform: uppercase;
+        font-size: 24px;
+        font-family: "BebasNeue_Book";
+        font-weight: bold;
+        color: #FFF; }
+
+.header {
+  position: absolute;
+  top: 50px;
+  display: block;
+  width: 100%;
+  z-index: 9; }
+
+.entry {
+  display: block;
+  width: 100%;
+  position: relative;
+  height: 750px;
+  background-image: url("../img/entry.png");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  z-index: 0; }
+  .entry__text {
+    position: absolute;
+    top: 225px;
+    width: 50%;
+    right: 5%;
+    color: #FFF; }
+    .entry__text h1 {
+      font-size: 86px;
+      font-family: "BebasNeue_Bold";
+      text-align: right;
+      margin-bottom: 0; }
+    .entry__text h3 {
+      font-family: "BebasNeue_Light";
+      font-size: 52px;
+      text-align: right;
+      margin: 0 0 10px 0; }
+    .entry__text p {
+      margin: 0;
+      font-size: 28px;
+      font-family: "BebasNeue_Book"; }
+      .entry__text p span {
+        display: block;
+        font-size: 30px; }
+
+/*# sourceMappingURL=style.css.map */

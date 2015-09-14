@@ -1,0 +1,13 @@
+header {
+  width: 1000px; }
+  header ul li {
+    display: inline-block; }
+  header .head {
+    background: #000; }
+    header .head p {
+      color: #F5F5F5; }
+
+footer {
+  width: 100%; }
+
+/*# sourceMappingURL=style.css.map */

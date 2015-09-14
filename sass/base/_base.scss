@@ -1,0 +1,44 @@
+html {
+	margin-top: 0!important;
+	padding-top: 0!important;
+	height: 100%;
+}
+html,
+body {
+	margin: 0;
+	padding: 0;
+	
+	background-color: #fff;
+	min-width: 1200px;
+	font-family: $regular;
+}
+
+.contain {
+	width: 1170px;
+	display: block;
+	margin: 0 auto;
+	position: relative;
+	&:before,
+	&:after{		
+		display: table;
+  		content: " ";
+	}
+	&:after{
+		clear: both;
+	}
+}
+
+a {
+	text-decoration: none;
+	&:hover, &:focus, &:active{
+		outline: none;
+	}
+}
+
+ul {
+	list-style-type: none;
+}
+
+b {
+	font-family: $bold;
+}

@@ -1,0 +1,46 @@
+$bold: 'BebasNeue_Bold';
+$light: 'BebasNeue_Light';
+$regular: 'BebasNeue_Regular';
+$book: 'BebasNeue_Book';
+
+@font-face {
+    font-family: 'BebasNeue_Bold';
+    src: url('../fonts/BebasNeue_Bold.eot');
+    src: url('../fonts/BebasNeue_Bold.eot') format('embedded-opentype'),
+         url('../fonts/BebasNeue_Bold.woff2') format('woff2'),
+         url('../fonts/BebasNeue_Bold.woff') format('woff'),
+         url('../fonts/BebasNeue_Bold.ttf') format('truetype'),
+         url('../fonts/BebasNeue_Bold.svg#BebasNeue_Bold') format('svg');
+}
+
+@font-face {
+    font-family: 'BebasNeue_Light';
+    src: url('../fonts/BebasNeue_Light.eot');
+    src: url('../fonts/BebasNeue_Light.eot') format('embedded-opentype'),
+         url('../fonts/BebasNeue_Light.woff2') format('woff2'),
+         url('../fonts/BebasNeue_Light.woff') format('woff'),
+         url('../fonts/BebasNeue_Light.ttf') format('truetype'),
+         url('../fonts/BebasNeue_Light.svg#BebasNeue_Light') format('svg');
+}
+
+@font-face {
+    font-family: 'BebasNeue_Regular';
+    src: url('../fonts/BebasNeue_Regular.eot');
+    src: url('../fonts/BebasNeue_Regular.eot') format('embedded-opentype'),
+         url('../fonts/BebasNeue_Regular.woff2') format('woff2'),
+         url('../fonts/BebasNeue_Regular.woff') format('woff'),
+         url('../fonts/BebasNeue_Regular.ttf') format('truetype'),
+         url('../fonts/BebasNeue_Regular.svg#BebasNeue_Regular') format('svg');
+}
+
+@font-face {
+    font-family: 'BebasNeue_Book';
+    src: url('../fonts/BebasNeue_Book.eot');
+    src: url('../fonts/BebasNeue_Book.eot') format('embedded-opentype'),
+         url('../fonts/BebasNeue_Book.woff2') format('woff2'),
+         url('../fonts/BebasNeue_Book.woff') format('woff'),
+         url('../fonts/BebasNeue_Book.ttf') format('truetype'),
+         url('../fonts/BebasNeue_Book.svg#BebasNeue_Book') format('svg');
+}
+
+
