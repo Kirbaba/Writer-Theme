@@ -41,6 +41,7 @@
 	display: inline-block;
 	width: 100%;
 	position: relative;
+	background-color: #F5F4F4;
 	background-image: url("../img/Vector-Smart Object.png");
 	background-repeat: no-repeat;
 	background-position: 50% 0;
@@ -200,5 +201,116 @@
 			margin: auto;
 		}
 		
+	}
+}
+
+.store {
+	display: inline-block;
+	width: 100%;
+	position: relative;
+	padding: 75px 0;
+	&__arrow {
+		background-image: url("../img/waves-copy 5.png");
+		display: block;
+		margin: 0 auto;
+		width: 81px;
+		height: 7px;
+		background-repeat: no-repeat;
+		-webkit-background-size: cover;
+		     -o-background-size: cover;
+		        background-size: cover;
+	}
+	h1 {
+		color: #2c2d37;
+	}
+	&__box {
+		display: block;
+		float: left;
+		position: relative;
+		width: 18%;
+		margin: 0 1%;
+		height: 380px;
+		overflow: hidden;
+		text-align: center;
+		word-spacing: nowrap;
+		vertical-align: middle;
+		z-index: 0;
+		&:after {
+			content: "";
+			display: inline-block;
+			height: 100%;
+			vertical-align: middle;
+		}
+		img {
+			vertical-align: middle;
+		}
+		&--text {
+			position: absolute;
+			display: block;
+			top: 150px;
+			z-index: 9;
+			padding: 0 10px;
+			h4 {				
+				color: #FFF;
+				font-size: 30px;
+				font-family: $bold;
+				text-align: left;
+				margin-bottom: 0;
+				margin-top: 0;
+			}
+			p {				
+				color: #FFF;
+				font-size: 16px;
+				text-align: left;
+			}
+		}
+		&--price {
+			display: block;
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			background: rgba(0, 0, 0, 0.4);
+			height: 64px;			
+			line-height: 64px;
+			opacity: 0;
+			@include transition(0.3s);
+			h4 {
+				color: #fff;
+				font-size: 30px;
+				font-family: $bold;
+				margin: 0;
+			}
+		}
+		&--stars {
+			position: absolute;
+			height: 50px;
+			margin-top: 5px;
+			margin-left: 10px;
+			@include transition(0.3s);
+			opacity: 0;
+			span {
+				display: block;
+				float: left;
+				height: 20px;
+				width: 20px;
+				background-repeat: no-repeat;
+				-webkit-background-size: 525%;
+				     -o-background-size: 525%;
+				        background-size: 525%;
+			}
+			.star-gld {
+				background: url("../img/Layer-4-1.png") -8px -9px;
+			}
+			.star-wht {
+				background: url("../img/Layer-4.png") -8px -9px;
+			}
+		}
+	}
+	a {
+		&:hover {
+			.store__box--price, .store__box--stars {
+				opacity: 1;
+			}
+		}
 	}
 }

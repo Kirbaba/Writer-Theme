@@ -189,6 +189,7 @@ b {
   display: inline-block;
   width: 100%;
   position: relative;
+  background-color: #F5F4F4;
   background-image: url("../img/Vector-Smart Object.png");
   background-repeat: no-repeat;
   background-position: 50% 0;
@@ -329,5 +330,104 @@ b {
       font-size: 22px; }
     .services__text--box {
       margin: auto; }
+
+.store {
+  display: inline-block;
+  width: 100%;
+  position: relative;
+  padding: 75px 0; }
+  .store__arrow {
+    background-image: url("../img/waves-copy 5.png");
+    display: block;
+    margin: 0 auto;
+    width: 81px;
+    height: 7px;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; }
+  .store h1 {
+    color: #2c2d37; }
+  .store__box {
+    display: block;
+    float: left;
+    position: relative;
+    width: 18%;
+    margin: 0 1%;
+    height: 380px;
+    overflow: hidden;
+    text-align: center;
+    word-spacing: nowrap;
+    vertical-align: middle;
+    z-index: 0; }
+    .store__box:after {
+      content: "";
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle; }
+    .store__box img {
+      vertical-align: middle; }
+    .store__box--text {
+      position: absolute;
+      display: block;
+      top: 150px;
+      z-index: 9;
+      padding: 0 10px; }
+      .store__box--text h4 {
+        color: #FFF;
+        font-size: 30px;
+        font-family: "BebasNeue_Bold";
+        text-align: left;
+        margin-bottom: 0;
+        margin-top: 0; }
+      .store__box--text p {
+        color: #FFF;
+        font-size: 16px;
+        text-align: left; }
+    .store__box--price {
+      display: block;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      height: 64px;
+      line-height: 64px;
+      opacity: 0;
+      -webkit-transition: all 0.3s linear;
+      -moz-transition: all 0.3s linear;
+      -ms-transition: all 0.3s linear;
+      -o-transition: all 0.3s linear;
+      transition: all 0.3s linear; }
+      .store__box--price h4 {
+        color: #fff;
+        font-size: 30px;
+        font-family: "BebasNeue_Bold";
+        margin: 0; }
+    .store__box--stars {
+      position: absolute;
+      height: 50px;
+      margin-top: 5px;
+      margin-left: 10px;
+      -webkit-transition: all 0.3s linear;
+      -moz-transition: all 0.3s linear;
+      -ms-transition: all 0.3s linear;
+      -o-transition: all 0.3s linear;
+      transition: all 0.3s linear;
+      opacity: 0; }
+      .store__box--stars span {
+        display: block;
+        float: left;
+        height: 20px;
+        width: 20px;
+        background-repeat: no-repeat;
+        -webkit-background-size: 525%;
+        -o-background-size: 525%;
+        background-size: 525%; }
+      .store__box--stars .star-gld {
+        background: url("../img/Layer-4-1.png") -8px -9px; }
+      .store__box--stars .star-wht {
+        background: url("../img/Layer-4.png") -8px -9px; }
+  .store a:hover .store__box--price, .store a:hover .store__box--stars {
+    opacity: 1; }
 
 /*# sourceMappingURL=style.css.map */
