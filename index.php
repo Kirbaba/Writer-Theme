@@ -62,12 +62,86 @@
     </section>
 
     <section class="services">
-        <div class="fotorama" data-minwidth="100%" data-fit="cover" data-autoplay="true" >
-            <div class="contain">
-                <div class=""><h1>Hello World</h1></div>
+        <div class="services__arrow"></div>
+        <h1 class="block_title">Услуги</h1>
+        <div class="fotorama" data-minwidth="100%" data-maxheight="760" data-fit="scaledown" data-nav="false" data-autoplay="true" >
+            <div class="services__container">
+                <div class="services__container__col">
+                    <div class="services__img">
+                        <img src="<?php bloginfo('template_directory'); ?>/img/3233.png" alt="">
+                    </div>
+                    <div class="services__text">
+                        <div class="services__text--box">
+                            <h4>Тренинги по России</h4>
+                            <p>Приняли участие на выставке MATE 2015 и представили наши проекты и технологии
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="services__container__col">                    
+                    <div class="services__text">
+                        <div class="services__text--box">
+                            <h4>Тренинги в Москве</h4>
+                            <p>Приняли участие на выставке MATE 2015 и представили наши проекты и технологии
+                            </p>
+                        </div>
+                    </div>
+                    <div class="services__img">
+                        <img src="<?php bloginfo('template_directory'); ?>/img/Background.png" alt="">
+                    </div>
+                </div>
+                <div class="services__container__col">
+                    <div class="services__img">
+                        <img src="<?php bloginfo('template_directory'); ?>/img/Background-1.png" alt="">
+                    </div>
+                    <div class="services__text">
+                        <div class="services__text--box">
+                            <h4>Книги</h4>
+                            <p>Приняли участие на выставке MATE 2015 и представили наши проекты и технологии
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="contain">
-                <div class=""><h1>Hello World</h1></div>
+           
+
+            <div class="services__container">                
+                <div class="services__container__col">
+                    <div class="services__img">
+                        <img src="<?php bloginfo('template_directory'); ?>/img/3233.png" alt="">
+                    </div>
+                    <div class="services__text">
+                        <div class="services__text--box">
+                            <h4>Тренинги по России</h4>
+                            <p>Приняли участие на выставке MATE 2015 и представили наши проекты и технологии
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="services__container__col">                    
+                    <div class="services__text">
+                        <div class="services__text--box">
+                            <h4>Тренинги в Москве</h4>
+                            <p>Приняли участие на выставке MATE 2015 и представили наши проекты и технологии
+                            </p>
+                        </div>
+                    </div>
+                    <div class="services__img">
+                        <img src="<?php bloginfo('template_directory'); ?>/img/Background.png" alt="">
+                    </div>
+                </div>
+                <div class="services__container__col">
+                    <div class="services__img">
+                        <img src="<?php bloginfo('template_directory'); ?>/img/Background-1.png" alt="">
+                    </div>
+                    <div class="services__text">
+                        <div class="services__text--box">
+                            <h4>Книги</h4>
+                            <p>Приняли участие на выставке MATE 2015 и представили наши проекты и технологии
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

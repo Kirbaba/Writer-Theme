@@ -141,4 +141,64 @@
 	width: 100%;
 	background-color: #2E3B47;
 	padding: 75px 0;
+	&__arrow {
+		display: block;
+		margin: 0 auto;
+		width: 81px;
+		height: 7px;
+		background-image: url("../img/waves-copy 2.png");
+		background-repeat: no-repeat;
+		-webkit-background-size: cover;
+		     -o-background-size: cover;
+		        background-size: cover;
+	}
+	&__container {
+		@extend .contain;
+		width: 1140px;
+		background-color: #3C4B57;
+		&__col {
+			width: 1 / 3 * 100%;
+			display: block;
+			float: left;				
+		}
+	}
+	&__img {
+		width: 100%;
+		height: 380px;
+		overflow: hidden;
+		text-align: center;
+		word-spacing: nowrap;
+		vertical-align: middle;
+		&:after {
+			content: "";
+			display: inline-block;
+			height: 100%;
+			vertical-align: middle;
+		}
+		img {
+			max-width: 100%;
+			min-height: 100%;
+			vertical-align: middle;
+		}
+	}
+	&__text {
+		text-align: center;
+		height: 380px;
+		display: flex;	
+		padding: 0 40px;	
+		h4 {
+			color: #53ddc1;
+			font-family: $bold;
+			font-size: 27px;
+			margin-top: 0;
+		}
+		p {
+			color: #fff;
+			font-size: 22px;
+		}
+		&--box {
+			margin: auto;
+		}
+		
+	}
 }

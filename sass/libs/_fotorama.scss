@@ -1,7 +1,7 @@
 .fotorama__arr {
-	width: 28px!important;
-	height: 44px!important;
-	background: url("../img/Layer-48.png")!important;
+	width: 30px!important;
+	height: 54px!important;
+	background: url("../img/arrow395-next.png")!important;
 	background-repeat: no-repeat!important;
 	display: block!important;
 	-webkit-background-size: contain!important;
@@ -12,15 +12,15 @@
 		opacity: 1!important;
 		display: block!important;
 		transform: none!important;
-		right: 5%!important;		
+		right: 3%!important;		
 	}
 	&--prev {
 		opacity: 1!important;
 		display: block!important;
 		transform: none!important;
-		background: url("../img/Layer-48-1.png")!important;
+		background: url("../img/arrow395.png")!important;
 		background-repeat: no-repeat!important;
-		left: 5%!important;
+		left: 3%!important;
 		-webkit-background-size: contain!important;
 		     -o-background-size: contain!important;
 		        background-size: contain!important;
@@ -45,24 +45,6 @@
 	        transform: none;
 }
 
-.fotorama__nav-wrap {
-    margin-top: -60px!important;
-    height: 60px!important;
-}
-
-.fotorama__dot {
-	width: 10px!important;
-	height: 10px!important;
-	border: 1px solid #fff!important;
-}
-	
-.fotorama__nav__frame.fotorama__active .fotorama__dot {
-	width: 10px!important;
-	height: 10px;
-	background-color: #FFF!important;
-	border: none!important;
-	border: 1px solid #fff!important;
-}
 
 .fotorama__arr {
 	&--prev {
