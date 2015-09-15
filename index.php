@@ -345,6 +345,41 @@
             </a>
         </div>
     </section>
+
+    <section class="reviews">
+        <div class="contain">
+            <div class="reviews__arrow"></div>
+            <h1 class="block_title">ОТЗЫВЫ КЛИЕНТОВ</h1>
+            <div class="reviews__box">
+                <p>Компания DIRECT OPTIMUM разработала пластиковую карту с Дополненной Реальностью.
+                 В отличие от обычных листовок, которые всем надоели, наши карты с Дополненной Реальностью 
+                 берут с восторгом и просят еще для своих Друзей. Это качественно новый вид рекламы, 
+                 который работает многократно и навсегда запоминается из-за первоначального ВАУ эффекта. 
+                    СПАСИБО DIRECT OPTIMUM!</p>
+                <div class="reviews__box--author">
+                    <div class="reviews__box--author-img">
+                        <img src="<?php bloginfo('template_directory'); ?>/img/Layer-27.png" alt="">
+                    </div>
+                    <h4>Крутилин Александр</h4>
+                    <p>Дисконтная система “Друзья”</p>
+                </div>
+            </div>
+            <div class="reviews__box">
+                 <p>Компания DIRECT OPTIMUM разработала пластиковую карту с Дополненной Реальностью.
+                 В отличие от обычных листовок, которые всем надоели, наши карты с Дополненной Реальностью 
+                 берут с восторгом и просят еще для своих Друзей. Это качественно новый вид рекламы, 
+                 который работает многократно и навсегда запоминается из-за первоначального ВАУ эффекта. 
+                    СПАСИБО DIRECT OPTIMUM!</p>
+                <div class="reviews__box--author">
+                    <div class="reviews__box--author-img">
+                        <img src="<?php bloginfo('template_directory'); ?>/img/Layer-28.png" alt="">
+                    </div>
+                    <h4>Крутилин Александр</h4>
+                    <p>Дисконтная система “Друзья”</p>
+                </div>
+            </div>
+        </div>
+    </section>
 <?php wp_footer(); ?>
 </body>
 </html>

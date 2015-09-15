@@ -445,4 +445,52 @@ b {
   .materials h1 {
     margin-bottom: 0; }
 
+.reviews {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  padding: 75px 0 225px;
+  background-image: url("../img/Curves-1 copy.png");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  .reviews__arrow {
+    display: block;
+    margin: 0 auto;
+    background-image: url("../img/waves-copy 3.png");
+    width: 84px;
+    height: 7px;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; }
+  .reviews h1 {
+    margin-top: 10px; }
+  .reviews__box {
+    display: block;
+    float: left;
+    width: 50%;
+    color: #FFF;
+    position: relative; }
+    .reviews__box p {
+      font-size: 17px;
+      padding: 50px 50px 15px 0;
+      font-weight: 200;
+      font-family: "BebasNeue_Light";
+      background-image: url("../img/ap.png");
+      background-repeat: no-repeat;
+      background-position: 0 0; }
+    .reviews__box--author p {
+      padding: 0;
+      background: none;
+      margin: 0; }
+    .reviews__box--author-img {
+      display: block;
+      float: left;
+      margin-right: 15px; }
+    .reviews__box--author h4 {
+      margin-top: 15px;
+      margin-bottom: 0; }
+
 /*# sourceMappingURL=style.css.map */
