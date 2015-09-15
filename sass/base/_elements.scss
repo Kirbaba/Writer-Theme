@@ -4,6 +4,9 @@
 	width: 25px;
 	height: 23px;
 	margin: 0 25px;
+	&:hover {
+		background-image: url("../img/marker20-1.png");
+	}
 }
 
 .button-search {
@@ -11,4 +14,7 @@
 	background-image: url("../img/magnifier13.png");
 	width: 23px;
 	height: 23px;	
+	&:hover {
+		background-image: url("../img/magnifier13-1.png");
+	}
 }	

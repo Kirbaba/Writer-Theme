@@ -36,3 +36,109 @@
 		}
 	}
 }
+
+.aboutme {
+	display: inline-block;
+	width: 100%;
+	position: relative;
+	background-image: url("../img/Vector-Smart Object.png");
+	background-repeat: no-repeat;
+	background-position: 50% 0;
+	-webkit-background-size: 65%;
+	     -o-background-size: 65%;
+	        background-size: 65%;
+	padding: 115px 0;
+	&__text {
+		display: block;
+		float: left;
+		width: 30%;
+		padding-left: 5%;
+		h3 {
+			color: #2c2d37;
+			font-size: 30px;
+			margin: 20px 0;
+		}
+		p {
+			color: #4f4f51;
+			font-size: 16px;
+			font-family: $book;
+			font-weight: bold;
+		}
+		a {
+			display: block;
+			float: left;
+			color: #fff;
+			font-family: "Myriad Pro";
+			font-size: 14px;
+			text-align: center;
+			text-transform: uppercase;
+			width: 124px;
+			height: 36px;
+			@include border-radius(4px);
+			@include background-clip(padding-box);
+			background-color: #35ade9;
+			line-height: 36px;
+			text-decoration: none;
+			margin-top: 25px;
+			&:hover {
+				background-color: darken(#35ade9, 10%);
+			}
+		}
+		&--line {
+			display: block;
+			float: left;
+			background-image: url("../img/waves-copy.png");
+			background-repeat: no-repeat;
+			-webkit-background-size: contain;
+			     -o-background-size: contain;
+			        background-size: contain;
+			width: 92px;
+			height: 7px;			
+		}
+	}
+	&__photo {
+		display: block;
+		float: left;
+		position: relative;
+		width: 55%;
+		height: 350px;
+		padding: 0 5%;
+		&--front {
+			position: absolute;
+			overflow: hidden;
+			width: 318px;
+			height: 318px;
+			z-index: 9;
+			bottom: 0;
+			text-align: center;
+			word-spacing: nowrap;
+			vertical-align: middle;
+			&:after {
+				content: "";
+				display: inline-block;
+				height: 100%;
+				vertical-align: middle;
+			}
+			img {
+				max-width: 100%;
+				min-height: 100%;
+				vertical-align: middle;
+			}
+		}
+		&--back {
+			position: absolute;
+			overflow: hidden;
+			width: 650px;
+			height: 459px;
+			right: 5%;
+			top: -160px;
+		}
+	}
+}
+
+.services {
+	display: inline-block;
+	width: 100%;
+	background-color: #2E3B47;
+	padding: 75px 0;
+}

@@ -1,0 +1,82 @@
+.fotorama__arr {
+	width: 28px!important;
+	height: 44px!important;
+	background: url("../img/Layer-48.png")!important;
+	background-repeat: no-repeat!important;
+	display: block!important;
+	-webkit-background-size: contain!important;
+	     -o-background-size: contain!important;
+	        background-size: contain!important;
+	
+	&--next {
+		opacity: 1!important;
+		display: block!important;
+		transform: none!important;
+		right: 5%!important;		
+	}
+	&--prev {
+		opacity: 1!important;
+		display: block!important;
+		transform: none!important;
+		background: url("../img/Layer-48-1.png")!important;
+		background-repeat: no-repeat!important;
+		left: 5%!important;
+		-webkit-background-size: contain!important;
+		     -o-background-size: contain!important;
+		        background-size: contain!important;
+	}
+
+	&--disabled {
+		display: block!important;
+		opacity: 0!important;
+	}
+}
+
+.fotorama__wrap--no-controls.fotorama__wrap--toggle-arrows .fotorama__arr, 
+.fotorama__wrap--no-controls.fotorama__wrap--toggle-arrows .fotorama__fullscreen-icon {
+	opacity: 1!important;
+}
+
+.fotorama__wrap--css3.fotorama__wrap--no-controls.fotorama__wrap--slide.fotorama__wrap--toggle-arrows .fotorama__arr--prev {
+	-webkit-transform: none;
+	   -moz-transform: none;
+	    -ms-transform: none;
+	     -o-transform: none;
+	        transform: none;
+}
+
+.fotorama__nav-wrap {
+    margin-top: -60px!important;
+    height: 60px!important;
+}
+
+.fotorama__dot {
+	width: 10px!important;
+	height: 10px!important;
+	border: 1px solid #fff!important;
+}
+	
+.fotorama__nav__frame.fotorama__active .fotorama__dot {
+	width: 10px!important;
+	height: 10px;
+	background-color: #FFF!important;
+	border: none!important;
+	border: 1px solid #fff!important;
+}
+
+.fotorama__arr {
+	&--prev {
+		.fotorama__arr--disabled {
+			display: block!important;
+		}
+	}
+}
+.fotorama__arr.fotorama__arr--next.fotorama__arr--disabled {
+	display: block!important;
+	opacity: 1!important;
+}
+
+.fotorama__arr.fotorama__arr--prev.fotorama__arr--disabled {
+	display: block!important;
+	opacity: 1!important;
+}

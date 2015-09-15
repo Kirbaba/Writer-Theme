@@ -14,6 +14,72 @@
   font-family: 'BebasNeue_Book';
   src: url("../fonts/BebasNeue_Book.eot");
   src: url("../fonts/BebasNeue_Book.eot") format("embedded-opentype"), url("../fonts/BebasNeue_Book.woff2") format("woff2"), url("../fonts/BebasNeue_Book.woff") format("woff"), url("../fonts/BebasNeue_Book.ttf") format("truetype"), url("../fonts/BebasNeue_Book.svg#BebasNeue_Book") format("svg"); }
+.fotorama__arr {
+  width: 28px !important;
+  height: 44px !important;
+  background: url("../img/Layer-48.png") !important;
+  background-repeat: no-repeat !important;
+  display: block !important;
+  -webkit-background-size: contain !important;
+  -o-background-size: contain !important;
+  background-size: contain !important; }
+  .fotorama__arr--next {
+    opacity: 1 !important;
+    display: block !important;
+    transform: none !important;
+    right: 5% !important; }
+  .fotorama__arr--prev {
+    opacity: 1 !important;
+    display: block !important;
+    transform: none !important;
+    background: url("../img/Layer-48-1.png") !important;
+    background-repeat: no-repeat !important;
+    left: 5% !important;
+    -webkit-background-size: contain !important;
+    -o-background-size: contain !important;
+    background-size: contain !important; }
+  .fotorama__arr--disabled {
+    display: block !important;
+    opacity: 0 !important; }
+
+.fotorama__wrap--no-controls.fotorama__wrap--toggle-arrows .fotorama__arr,
+.fotorama__wrap--no-controls.fotorama__wrap--toggle-arrows .fotorama__fullscreen-icon {
+  opacity: 1 !important; }
+
+.fotorama__wrap--css3.fotorama__wrap--no-controls.fotorama__wrap--slide.fotorama__wrap--toggle-arrows .fotorama__arr--prev {
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none; }
+
+.fotorama__nav-wrap {
+  margin-top: -60px !important;
+  height: 60px !important; }
+
+.fotorama__dot {
+  width: 10px !important;
+  height: 10px !important;
+  border: 1px solid #fff !important; }
+
+.fotorama__nav__frame.fotorama__active .fotorama__dot {
+  width: 10px !important;
+  height: 10px;
+  background-color: #FFF !important;
+  border: none !important;
+  border: 1px solid #fff !important; }
+
+.fotorama__arr--prev .fotorama__arr--disabled {
+  display: block !important; }
+
+.fotorama__arr.fotorama__arr--next.fotorama__arr--disabled {
+  display: block !important;
+  opacity: 1 !important; }
+
+.fotorama__arr.fotorama__arr--prev.fotorama__arr--disabled {
+  display: block !important;
+  opacity: 1 !important; }
+
 html {
   margin-top: 0 !important;
   padding-top: 0 !important;
@@ -55,12 +121,16 @@ b {
   width: 25px;
   height: 23px;
   margin: 0 25px; }
+  .button-buy:hover {
+    background-image: url("../img/marker20-1.png"); }
 
 .button-search {
   display: inline-block;
   background-image: url("../img/magnifier13.png");
   width: 23px;
   height: 23px; }
+  .button-search:hover {
+    background-image: url("../img/magnifier13-1.png"); }
 
 .navigation {
   float: right;
@@ -81,6 +151,8 @@ b {
         font-family: "BebasNeue_Book";
         font-weight: bold;
         color: #FFF; }
+        .navigation ul li a:hover {
+          color: #38BBDD; }
 
 .header {
   position: absolute;
@@ -121,5 +193,102 @@ b {
       .entry__text p span {
         display: block;
         font-size: 30px; }
+
+.aboutme {
+  display: inline-block;
+  width: 100%;
+  position: relative;
+  background-image: url("../img/Vector-Smart Object.png");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  -webkit-background-size: 65%;
+  -o-background-size: 65%;
+  background-size: 65%;
+  padding: 115px 0; }
+  .aboutme__text {
+    display: block;
+    float: left;
+    width: 30%;
+    padding-left: 5%; }
+    .aboutme__text h3 {
+      color: #2c2d37;
+      font-size: 30px;
+      margin: 20px 0; }
+    .aboutme__text p {
+      color: #4f4f51;
+      font-size: 16px;
+      font-family: "BebasNeue_Book";
+      font-weight: bold; }
+    .aboutme__text a {
+      display: block;
+      float: left;
+      color: #fff;
+      font-family: "Myriad Pro";
+      font-size: 14px;
+      text-align: center;
+      text-transform: uppercase;
+      width: 124px;
+      height: 36px;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      border-radius: 4px;
+      -o-background-clip: padding-box;
+      background-clip: padding-box;
+      background-color: #35ade9;
+      line-height: 36px;
+      text-decoration: none;
+      margin-top: 25px; }
+      .aboutme__text a:hover {
+        background-color: #1795d4; }
+    .aboutme__text--line {
+      display: block;
+      float: left;
+      background-image: url("../img/waves-copy.png");
+      background-repeat: no-repeat;
+      -webkit-background-size: contain;
+      -o-background-size: contain;
+      background-size: contain;
+      width: 92px;
+      height: 7px; }
+  .aboutme__photo {
+    display: block;
+    float: left;
+    position: relative;
+    width: 55%;
+    height: 350px;
+    padding: 0 5%; }
+    .aboutme__photo--front {
+      position: absolute;
+      overflow: hidden;
+      width: 318px;
+      height: 318px;
+      z-index: 9;
+      bottom: 0;
+      text-align: center;
+      word-spacing: nowrap;
+      vertical-align: middle; }
+      .aboutme__photo--front:after {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle; }
+      .aboutme__photo--front img {
+        max-width: 100%;
+        min-height: 100%;
+        vertical-align: middle; }
+    .aboutme__photo--back {
+      position: absolute;
+      overflow: hidden;
+      width: 650px;
+      height: 459px;
+      right: 5%;
+      top: -160px; }
+
+.services {
+  display: inline-block;
+  width: 100%;
+  background-color: #2E3B47;
+  padding: 75px 0; }
 
 /*# sourceMappingURL=style.css.map */

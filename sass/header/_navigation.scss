@@ -16,7 +16,10 @@
 				font-size: 24px;
 				font-family: $book;
 				font-weight: bold;
-				color: #FFF;			
+				color: #FFF;
+				&:hover {
+					color: #38BBDD;
+				}			
 			}			
 		}
 	}
