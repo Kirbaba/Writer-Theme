@@ -314,3 +314,15 @@
 		}
 	}
 }
+
+.materials {
+	@extend .store;
+	padding-top: 0;
+	h2 {
+		color: #000;
+		margin-top: 10px;
+	}
+	h1 {
+		margin-bottom: 0;
+	}
+}

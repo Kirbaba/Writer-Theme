@@ -245,6 +245,106 @@
             </a>
         </div>
     </section>
+
+    <section class="materials">
+        <div class="contain">
+        <h1 class="block_title">бесплатные материалы</h1>
+        <h2 class="block_descript">(материалы в помощь)</h2>
+         <a href="#">
+                <div class="store__box">
+                    <div class="store__box--stars">
+                        <span class="star-gld"></span>
+                        <span class="star-wht"></span>
+                        <span class="star-wht"></span>
+                        <span class="star-wht"></span>
+                        <span class="star-wht"></span>                        
+                    </div>
+                    <img src="<?php bloginfo('template_directory'); ?>/img/Layer-108.png" alt="">
+                    <div class="store__box--text">
+                        <h4>Книга 1</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur.</p>
+                    </div>
+                    <div class="store__box--price">
+                        <h4>850 руб</h4>
+                    </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="store__box">
+                     <div class="store__box--stars">
+                        <span class="star-wht"></span>
+                        <span class="star-wht"></span>
+                        <span class="star-wht"></span>
+                        <span class="star-wht"></span>
+                        <span class="star-wht"></span>                        
+                    </div>
+                    <img src="<?php bloginfo('template_directory'); ?>/img/Layer-109.png" alt="">
+                    <div class="store__box--text">
+                        <h4>Книга 2</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur.</p>
+                    </div>
+                    <div class="store__box--price">
+                        <h4>850 руб</h4>
+                    </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="store__box">
+                     <div class="store__box--stars">
+                        <span class="star-gld"></span>
+                        <span class="star-gld"></span>
+                        <span class="star-wht"></span>
+                        <span class="star-wht"></span>
+                        <span class="star-wht"></span>                        
+                    </div>
+                    <img src="<?php bloginfo('template_directory'); ?>/img/Layer-111.png" alt="">
+                    <div class="store__box--text">
+                        <h4>Книга 3</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur.</p>
+                    </div>
+                    <div class="store__box--price">
+                        <h4>850 руб</h4>
+                    </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="store__box">
+                     <div class="store__box--stars">
+                        <span class="star-gld"></span>
+                        <span class="star-gld"></span>
+                        <span class="star-gld"></span>
+                        <span class="star-wht"></span>
+                        <span class="star-wht"></span>                        
+                    </div>
+                    <img src="<?php bloginfo('template_directory'); ?>/img/Layer-116.png" alt="">
+                    <div class="store__box--text">
+                        <h4>Книга 4</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur.</p>
+                    </div>
+                    <div class="store__box--price">
+                        <h4>850 руб</h4>
+                    </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="store__box">
+                     <div class="store__box--stars">
+                        <span class="star-wht"></span>
+                        <span class="star-wht"></span>
+                        <span class="star-wht"></span>                        
+                    </div>
+                    <img src="<?php bloginfo('template_directory'); ?>/img/Layer-117.png" alt="">
+                    <div class="store__box--text">
+                        <h4>Книга 5</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur.</p>
+                    </div>
+                    <div class="store__box--price">
+                        <h4>850 руб</h4>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
 <?php wp_footer(); ?>
 </body>
 </html>

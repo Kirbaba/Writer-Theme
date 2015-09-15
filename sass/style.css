@@ -106,6 +106,13 @@ b {
   text-align: center;
   margin-top: 15px; }
 
+.block_descript {
+  font-family: "BebasNeue_Light";
+  font-size: 35px;
+  text-align: center;
+  color: #f7f7f7;
+  font-weight: 200; }
+
 .button-buy {
   display: inline-block;
   background-image: url("../img/marker20.png");
@@ -331,7 +338,7 @@ b {
     .services__text--box {
       margin: auto; }
 
-.store {
+.store, .materials {
   display: inline-block;
   width: 100%;
   position: relative;
@@ -346,7 +353,7 @@ b {
     -webkit-background-size: cover;
     -o-background-size: cover;
     background-size: cover; }
-  .store h1 {
+  .store h1, .materials h1 {
     color: #2c2d37; }
   .store__box {
     display: block;
@@ -427,7 +434,15 @@ b {
         background: url("../img/Layer-4-1.png") -8px -9px; }
       .store__box--stars .star-wht {
         background: url("../img/Layer-4.png") -8px -9px; }
-  .store a:hover .store__box--price, .store a:hover .store__box--stars {
+  .store a:hover .store__box--price, .materials a:hover .store__box--price, .store a:hover .store__box--stars, .materials a:hover .store__box--stars {
     opacity: 1; }
+
+.materials {
+  padding-top: 0; }
+  .materials h2 {
+    color: #000;
+    margin-top: 10px; }
+  .materials h1 {
+    margin-bottom: 0; }
 
 /*# sourceMappingURL=style.css.map */
