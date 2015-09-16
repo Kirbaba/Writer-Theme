@@ -15,12 +15,12 @@
     <header class="header">
     	<nav class="navigation">
     		<ul>
-    			<li><a href="#nowhere">обо мне</a></li>
-    			<li><a href="#nowhere">услуги</a></li>
-    			<li><a href="#nowhere">Магазин</a></li>
-    			<li><a href="#nowhere">бесплатные материалы</a></li>
+    			<li><a href="#go_about" class="smoothScroll">обо мне</a></li>
+    			<li><a href="#go_serv" class="smoothScroll">услуги</a></li>
+    			<li><a href="#go_store" class="smoothScroll">Магазин</a></li>
+    			<li><a href="#go_materials" class="smoothScroll">бесплатные материалы</a></li>
     			<li><a href="#nowhere">форум</a></li>
-    			<li><a href="#nowhere">КОНТАКТЫ</a></li>    			
+    			<li><a href="#go_contacts" class="smoothScroll">КОНТАКТЫ</a></li>    			
     		</ul>
     		<a href="#nowhere" class="button-buy"></a>
 			<a href="#nowhere" class="button-search"></a>
@@ -39,6 +39,7 @@
     </section>
 
     <section class="aboutme">
+        <a id="go_about"></a>
         <div class="aboutme__text">
             <div class="aboutme__text--line"></div>
             <h3>Обо мне</h3>
@@ -62,6 +63,7 @@
     </section>
 
     <section class="services">
+        <a id="go_serv"></a>
         <div class="services__arrow"></div>
         <h1 class="block_title">Услуги</h1>
         <div class="fotorama" data-minwidth="100%" data-maxheight="760" data-fit="scaledown" data-nav="false" data-autoplay="true" >
@@ -147,6 +149,7 @@
     </section>
 
     <section class="store">
+        <a id="go_store"></a>
         <div class="contain">
             <div class="store__arrow"></div>
             <h1 class="block_title">магазин</h1>
@@ -247,6 +250,7 @@
     </section>
 
     <section class="materials">
+        <a id="go_materials"></a>
         <div class="contain">
         <h1 class="block_title">бесплатные материалы</h1>
         <h2 class="block_descript">(материалы в помощь)</h2>
@@ -381,7 +385,8 @@
         </div>
     </section>
 
-    <section class="contactme">        
+    <section class="contactme">   
+        <a id="go_contacts"></a>     
         <h1 class="block_title">Свяжитесь со мной</h1>
         <form action="#">
         <input type="text" class="contactme--input" placeholder="Ваше имя">
