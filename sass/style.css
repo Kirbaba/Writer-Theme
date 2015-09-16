@@ -556,4 +556,18 @@ b {
       background-color: #43D9E5;
       color: #fff; }
 
+.footer {
+  display: inline-block;
+  width: 100%;
+  position: relative;
+  background-color: #293031;
+  height: 85px;
+  padding-top: 25px; }
+  .footer h5 {
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: 400; }
+
 /*# sourceMappingURL=style.css.map */
