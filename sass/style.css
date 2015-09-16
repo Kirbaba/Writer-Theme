@@ -548,6 +548,7 @@ b {
     transition: all 0.3s linear;
     border: 1px solid #43D9E5;
     margin: 20px 2% 20px 0;
+    font-size: 15px;
     outline: none;
     color: #525252;
     font-family: "BebasNeue_Regular";
