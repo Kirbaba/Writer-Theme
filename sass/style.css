@@ -14,6 +14,10 @@
   font-family: 'BebasNeue_Book';
   src: url("../fonts/BebasNeue_Book.eot");
   src: url("../fonts/BebasNeue_Book.eot") format("embedded-opentype"), url("../fonts/BebasNeue_Book.woff2") format("woff2"), url("../fonts/BebasNeue_Book.woff") format("woff"), url("../fonts/BebasNeue_Book.ttf") format("truetype"), url("../fonts/BebasNeue_Book.svg#BebasNeue_Book") format("svg"); }
+@font-face {
+  font-family: 'HelveticaNeueCyrLight';
+  src: url("../fonts/HelveticaNeue/HelveticaNeueCyrLight.eot");
+  src: url("../fonts/HelveticaNeue/HelveticaNeueCyrLight.eot") format("embedded-opentype"), url("../fonts/HelveticaNeue/HelveticaNeueCyrLight.woff2") format("woff2"), url("../fonts/HelveticaNeue/HelveticaNeueCyrLight.woff") format("woff"), url("../fonts/HelveticaNeue/HelveticaNeueCyrLight.ttf") format("truetype"), url("../fonts/HelveticaNeue/HelveticaNeueCyrLight.svg#HelveticaNeueCyrLight") format("svg"); }
 .fotorama__arr {
   width: 30px !important;
   height: 54px !important;
@@ -77,15 +81,15 @@ body {
   min-width: 1200px;
   font-family: "BebasNeue_Regular"; }
 
-.contain, .services__container {
+.contain, .services__container, .contactme {
   width: 1170px;
   display: block;
   margin: 0 auto;
   position: relative; }
-  .contain:before, .services__container:before, .contain:after, .services__container:after {
+  .contain:before, .services__container:before, .contactme:before, .contain:after, .services__container:after, .contactme:after {
     display: table;
     content: " "; }
-  .contain:after, .services__container:after {
+  .contain:after, .services__container:after, .contactme:after {
     clear: both; }
 
 a {
@@ -472,12 +476,12 @@ b {
     float: left;
     width: 50%;
     color: #FFF;
-    position: relative; }
+    position: relative;
+    font-family: "HelveticaNeueCyrLight"; }
     .reviews__box p {
       font-size: 17px;
       padding: 50px 50px 15px 0;
       font-weight: 200;
-      font-family: "BebasNeue_Light";
       background-image: url("../img/ap.png");
       background-repeat: no-repeat;
       background-position: 0 0; }
@@ -491,6 +495,65 @@ b {
       margin-right: 15px; }
     .reviews__box--author h4 {
       margin-top: 15px;
-      margin-bottom: 0; }
+      margin-bottom: 5px; }
+
+.contactme {
+  width: 75%;
+  font-family: "BebasNeue_Regular";
+  position: relative;
+  padding: 50px 0; }
+  .contactme h1 {
+    color: #525252; }
+  .contactme--input {
+    display: block;
+    float: left;
+    width: 44%;
+    height: 36px;
+    line-height: 36px;
+    padding: 5px 10px;
+    margin: 20px 2%;
+    border: none;
+    border-bottom: 2px solid #aeacac;
+    color: #525252;
+    font-size: 15px;
+    outline: none;
+    font-family: "BebasNeue_Regular";
+    position: relative; }
+  .contactme--text {
+    display: block;
+    float: left;
+    width: 94%;
+    height: 36px;
+    line-height: 36px;
+    margin: 20px 2%;
+    padding: 5px 10px;
+    border: none;
+    border-bottom: 2px solid #aeacac;
+    resize: none;
+    outline: none;
+    color: #525252;
+    font-size: 15px;
+    font-family: "BebasNeue_Regular"; }
+  .contactme--sub {
+    display: block;
+    float: right;
+    width: 132px;
+    height: 36px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0);
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    border: 1px solid #43D9E5;
+    margin: 20px 2% 20px 0;
+    outline: none;
+    color: #525252;
+    font-family: "BebasNeue_Regular";
+    cursor: pointer; }
+    .contactme--sub:hover, .contactme--sub:active, .contactme--sub:focus {
+      background-color: #43D9E5;
+      color: #fff; }
 
 /*# sourceMappingURL=style.css.map */

@@ -380,6 +380,16 @@
             </div>
         </div>
     </section>
+
+    <section class="contactme">        
+        <h1 class="block_title">Свяжитесь со мной</h1>
+        <form action="#">
+        <input type="text" class="contactme--input" placeholder="Ваше имя">
+        <input type="text" class="contactme--input" placeholder="email">
+        <textarea class="contactme--text" placeholder="Сообщение"></textarea>
+        <input type="submit" class="contactme--sub" value="Отправить"></div>  
+        </form>
+    </section>
 <?php wp_footer(); ?>
 </body>
 </html>

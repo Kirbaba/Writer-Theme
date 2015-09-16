@@ -2,6 +2,7 @@ $bold: 'BebasNeue_Bold';
 $light: 'BebasNeue_Light';
 $regular: 'BebasNeue_Regular';
 $book: 'BebasNeue_Book';
+$helv:  'HelveticaNeueCyrLight';
 
 @font-face {
     font-family: 'BebasNeue_Bold';
@@ -43,4 +44,13 @@ $book: 'BebasNeue_Book';
          url('../fonts/BebasNeue_Book.svg#BebasNeue_Book') format('svg');
 }
 
+@font-face {
+    font-family: 'HelveticaNeueCyrLight';
+    src: url('../fonts/HelveticaNeue/HelveticaNeueCyrLight.eot');
+    src: url('../fonts/HelveticaNeue/HelveticaNeueCyrLight.eot') format('embedded-opentype'),
+         url('../fonts/HelveticaNeue/HelveticaNeueCyrLight.woff2') format('woff2'),
+         url('../fonts/HelveticaNeue/HelveticaNeueCyrLight.woff') format('woff'),
+         url('../fonts/HelveticaNeue/HelveticaNeueCyrLight.ttf') format('truetype'),
+         url('../fonts/HelveticaNeue/HelveticaNeueCyrLight.svg#HelveticaNeueCyrLight') format('svg');
+}
 
