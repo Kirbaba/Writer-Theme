@@ -78,7 +78,7 @@
 			@include border-radius(4px);
 			@include background-clip(padding-box);
 			background-color: #35ade9;
-			line-height: 36px;
+			line-height: 38px;
 			text-decoration: none;
 			margin-top: 25px;
 			&:hover {
@@ -387,63 +387,141 @@
 
 .contactme {
 	@extend .contain;
-	width: 75%;
-	font-family: $regular;
+	width: 70%;
 	position: relative;
 	padding: 50px 0;
 	h1 {
 		color: #525252;
 	}
-	&--input {
+	&__form {
 		display: block;
 		float: left;
-		width: 44%;
-		height: 36px;
-		line-height: 36px;
-		padding: 5px 10px;
-		margin: 20px 2%;
-		border: none;
-		border-bottom: 2px solid #aeacac;
-		color: #525252;
-		font-size: 15px;
-		outline: none;
-		font-family: $regular;
-		position: relative;		
+		position: relative;
+		width: 85%;
+		&--input {
+			display: block;
+			float: left;
+			width: 44%;
+			height: 36px;
+			line-height: 36px;
+			padding: 5px 8px;
+			margin: 20px 2%;
+			border: none;
+			border-bottom: 2px solid #aeacac;
+			color: #525252;
+			font-size: 15px;
+			outline: none;
+			font-family: $regular;
+			position: relative;		
+		}
+		&--text {
+			display: block;
+			float: left;
+			width: 94%;
+			height: 36px;
+			line-height: 36px;
+			margin: 20px 2%;
+			padding: 5px 8px;
+			border: none;
+			border-bottom: 2px solid #aeacac;
+			resize: none;
+			outline: none;
+			color: #525252;
+			font-size: 15px;
+			font-family: $regular;		
+		}
+	 	&--sub {
+			display: block;
+			float: right;
+			width: 132px;
+			height: 36px;
+			text-align: center;
+			background-color: rgba(255, 255, 255, 0);
+			@include transition(0.3s);
+			border: 1px solid #43D9E5;
+			margin: 20px 2% 20px 0;
+			font-size: 15px;
+			outline: none;
+			color: #525252;
+			font-family: $regular;
+			cursor: pointer;
+			&:hover, &:active, &:focus {
+				background-color: #43D9E5;
+				color: #fff;
+			}
+		}
 	}
-	&--text {
+	&__forum {
 		display: block;
 		float: left;
-		width: 94%;
-		height: 36px;
-		line-height: 36px;
-		margin: 20px 2%;
-		padding: 5px 10px;
-		border: none;
-		border-bottom: 2px solid #aeacac;
-		resize: none;
-		outline: none;
-		color: #525252;
-		font-size: 15px;
-		font-family: $regular;		
-	}
- 	&--sub {
-		display: block;
-		float: right;
-		width: 132px;
-		height: 36px;
-		text-align: center;
-		background-color: rgba(255, 255, 255, 0);
-		@include transition(0.3s);
-		border: 1px solid #43D9E5;
-		margin: 20px 2% 20px 0;
-		font-size: 15px;
-		outline: none;
-		color: #525252;
-		font-family: $regular;
-		cursor: pointer;
-		&:hover, &:active, &:focus {
-			background-color: #43D9E5;
+		height: 252px;
+		position: relative;
+		a {
+			display: block;
+			position: absolute;
+			bottom: 20px;
+			left: 10px;
+			float: left;
 			color: #fff;
+			font-size: 14px;
+			text-align: center;
+			text-transform: uppercase;
+			width: 131px;
+			height: 36px;
+			@include background-clip(padding-box);
+			background-color: #37bbdd;
+			line-height: 38px;
+			text-decoration: none;
+			margin-top: 25px;
+			@include transition(0.3s);
+			&:hover {
+				background-color: darken(#37bbdd, 10%);
+			}
 		}
 	} 
+	 
+}
+
+.contactinfo {
+	display: block;
+	float: left;
+	width: 100%;
+	background-image: url("../img/MAP.png");
+	background-position: 50% 100%;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	     -o-background-size: cover;
+	        background-size: cover;
+	&__block {
+		display: block;
+		float: left;
+		background-color: #2B353A;
+		padding: 75px 40px;
+		color: #fff;
+		h3 {
+			color: #fff;
+			font-family: $bold;
+			font-size: 20px;
+			margin-bottom: 20px;
+		}
+		a {
+			display: inline-block;
+			width: 40px;
+			height: 40px;
+			margin-right: 10px;
+			margin-bottom: 15px;
+			background-repeat: no-repeat;
+			background-position: center;
+			-webkit-background-size: cover;
+			     -o-background-size: cover;
+			        background-size: cover;
+		}
+		p {
+			color: #fff;
+			font-size: 16px;
+			padding: 15px 0 15px 50px;
+			margin-top: 10px;
+			background-repeat: no-repeat;
+		}
+	}
 }

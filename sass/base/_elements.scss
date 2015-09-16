@@ -18,3 +18,41 @@
 		background-image: url("../img/magnifier13-1.png");
 	}
 }	
+
+.phone_number  {
+	background-image: url('../img/iPhone-potrait.png');
+	background-position: 0 50%;
+}
+
+.email_adress {
+	background-image: url('../img/email.png');
+	background-position: 0 50%;
+}
+
+.tw {
+	background-image: url('../img/Twitter.png');
+	&:hover {
+		background-image: url('../img/Twitter-1.png');
+	}
+}
+
+.fb {
+	background-image: url('../img/Facebook.png');
+	&:hover {
+		background-image: url('../img/Facebook-1.png');
+	}
+}
+
+.pn {
+	background-image: url('../img/Pinterest.png');
+	&:hover {
+		background-image: url('../img/Pinterest-1.png');
+	}
+}
+
+.gp {
+	background-image: url('../img/Google.png');
+	&:hover {
+		background-image: url('../img/Google-1.png');
+	}
+}

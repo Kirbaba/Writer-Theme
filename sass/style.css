@@ -68,6 +68,10 @@
   display: block !important;
   opacity: 1 !important; }
 
+* {
+  padding: 0;
+  margin: 0; }
+
 html {
   margin-top: 0 !important;
   padding-top: 0 !important;
@@ -133,6 +137,34 @@ b {
   height: 23px; }
   .button-search:hover {
     background-image: url("../img/magnifier13-1.png"); }
+
+.phone_number {
+  background-image: url("../img/iPhone-potrait.png");
+  background-position: 0 50%; }
+
+.email_adress {
+  background-image: url("../img/email.png");
+  background-position: 0 50%; }
+
+.tw {
+  background-image: url("../img/Twitter.png"); }
+  .tw:hover {
+    background-image: url("../img/Twitter-1.png"); }
+
+.fb {
+  background-image: url("../img/Facebook.png"); }
+  .fb:hover {
+    background-image: url("../img/Facebook-1.png"); }
+
+.pn {
+  background-image: url("../img/Pinterest.png"); }
+  .pn:hover {
+    background-image: url("../img/Pinterest-1.png"); }
+
+.gp {
+  background-image: url("../img/Google.png"); }
+  .gp:hover {
+    background-image: url("../img/Google-1.png"); }
 
 .navigation {
   float: right;
@@ -239,7 +271,7 @@ b {
       -o-background-clip: padding-box;
       background-clip: padding-box;
       background-color: #35ade9;
-      line-height: 36px;
+      line-height: 38px;
       text-decoration: none;
       margin-top: 25px; }
       .aboutme__text a:hover {
@@ -498,64 +530,137 @@ b {
       margin-bottom: 5px; }
 
 .contactme {
-  width: 75%;
-  font-family: "BebasNeue_Regular";
+  width: 70%;
   position: relative;
   padding: 50px 0; }
   .contactme h1 {
     color: #525252; }
-  .contactme--input {
+  .contactme__form {
     display: block;
     float: left;
-    width: 44%;
-    height: 36px;
-    line-height: 36px;
-    padding: 5px 10px;
-    margin: 20px 2%;
-    border: none;
-    border-bottom: 2px solid #aeacac;
-    color: #525252;
-    font-size: 15px;
-    outline: none;
-    font-family: "BebasNeue_Regular";
+    position: relative;
+    width: 85%; }
+    .contactme__form--input {
+      display: block;
+      float: left;
+      width: 44%;
+      height: 36px;
+      line-height: 36px;
+      padding: 5px 8px;
+      margin: 20px 2%;
+      border: none;
+      border-bottom: 2px solid #aeacac;
+      color: #525252;
+      font-size: 15px;
+      outline: none;
+      font-family: "BebasNeue_Regular";
+      position: relative; }
+    .contactme__form--text {
+      display: block;
+      float: left;
+      width: 94%;
+      height: 36px;
+      line-height: 36px;
+      margin: 20px 2%;
+      padding: 5px 8px;
+      border: none;
+      border-bottom: 2px solid #aeacac;
+      resize: none;
+      outline: none;
+      color: #525252;
+      font-size: 15px;
+      font-family: "BebasNeue_Regular"; }
+    .contactme__form--sub {
+      display: block;
+      float: right;
+      width: 132px;
+      height: 36px;
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0);
+      -webkit-transition: all 0.3s linear;
+      -moz-transition: all 0.3s linear;
+      -ms-transition: all 0.3s linear;
+      -o-transition: all 0.3s linear;
+      transition: all 0.3s linear;
+      border: 1px solid #43D9E5;
+      margin: 20px 2% 20px 0;
+      font-size: 15px;
+      outline: none;
+      color: #525252;
+      font-family: "BebasNeue_Regular";
+      cursor: pointer; }
+      .contactme__form--sub:hover, .contactme__form--sub:active, .contactme__form--sub:focus {
+        background-color: #43D9E5;
+        color: #fff; }
+  .contactme__forum {
+    display: block;
+    float: left;
+    height: 252px;
     position: relative; }
-  .contactme--text {
+    .contactme__forum a {
+      display: block;
+      position: absolute;
+      bottom: 20px;
+      left: 10px;
+      float: left;
+      color: #fff;
+      font-size: 14px;
+      text-align: center;
+      text-transform: uppercase;
+      width: 131px;
+      height: 36px;
+      -o-background-clip: padding-box;
+      background-clip: padding-box;
+      background-color: #37bbdd;
+      line-height: 38px;
+      text-decoration: none;
+      margin-top: 25px;
+      -webkit-transition: all 0.3s linear;
+      -moz-transition: all 0.3s linear;
+      -ms-transition: all 0.3s linear;
+      -o-transition: all 0.3s linear;
+      transition: all 0.3s linear; }
+      .contactme__forum a:hover {
+        background-color: #21a0c0; }
+
+.contactinfo {
+  display: block;
+  float: left;
+  width: 100%;
+  background-image: url("../img/MAP.png");
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  .contactinfo__block {
     display: block;
     float: left;
-    width: 94%;
-    height: 36px;
-    line-height: 36px;
-    margin: 20px 2%;
-    padding: 5px 10px;
-    border: none;
-    border-bottom: 2px solid #aeacac;
-    resize: none;
-    outline: none;
-    color: #525252;
-    font-size: 15px;
-    font-family: "BebasNeue_Regular"; }
-  .contactme--sub {
-    display: block;
-    float: right;
-    width: 132px;
-    height: 36px;
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0);
-    -webkit-transition: all 0.3s linear;
-    -moz-transition: all 0.3s linear;
-    -ms-transition: all 0.3s linear;
-    -o-transition: all 0.3s linear;
-    transition: all 0.3s linear;
-    border: 1px solid #43D9E5;
-    margin: 20px 2% 20px 0;
-    font-size: 15px;
-    outline: none;
-    color: #525252;
-    font-family: "BebasNeue_Regular";
-    cursor: pointer; }
-    .contactme--sub:hover, .contactme--sub:active, .contactme--sub:focus {
-      background-color: #43D9E5;
-      color: #fff; }
+    background-color: #2B353A;
+    padding: 75px 40px;
+    color: #fff; }
+    .contactinfo__block h3 {
+      color: #fff;
+      font-family: "BebasNeue_Bold";
+      font-size: 20px;
+      margin-bottom: 20px; }
+    .contactinfo__block a {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+      margin-bottom: 15px;
+      background-repeat: no-repeat;
+      background-position: center;
+      -webkit-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover; }
+    .contactinfo__block p {
+      color: #fff;
+      font-size: 16px;
+      padding: 15px 0 15px 50px;
+      margin-top: 10px;
+      background-repeat: no-repeat; }
 
 .footer {
   display: inline-block;
@@ -569,6 +674,7 @@ b {
     font-size: 18px;
     text-align: center;
     vertical-align: middle;
-    font-weight: 400; }
+    font-weight: 400;
+    margin-top: 20px; }
 
 /*# sourceMappingURL=style.css.map */

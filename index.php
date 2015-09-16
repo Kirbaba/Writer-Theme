@@ -385,17 +385,37 @@
         </div>
     </section>
 
-    <section class="contactme">   
-        <a id="go_contacts"></a>     
-        <h1 class="block_title">Свяжитесь со мной</h1>
-        <form action="#">
-        <input type="text" class="contactme--input" placeholder="Ваше имя">
-        <input type="text" class="contactme--input" placeholder="email">
-        <textarea class="contactme--text" placeholder="Сообщение"></textarea>
-        <input type="submit" class="contactme--sub" value="Отправить"></div>  
-        </form>
+    <section class="contactme"> 
+        <a id="go_contacts"></a>
+                       
+            <h1 class="block_title">Свяжитесь со мной</h1>
+            <div class="contactme__form">
+                <form action="#">
+                    <input type="text" class="contactme__form--input" placeholder="Ваше имя">
+                    <input type="text" class="contactme__form--input" placeholder="email">
+                    <textarea class="contactme__form--text" placeholder="Сообщение"></textarea>
+                    <input type="submit" class="contactme__form--sub" value="Отправить"></div>  
+                </form>
+            </div>
+            <div class="contactme__forum">
+                <a href="#">перейти на форум</a>
+            </div>        
     </section>
-
+    
+    <section class="contactinfo">
+        <div class="contain">
+            <div class="contactinfo__block">
+                <h3>контакты</h3>
+                <a href="#" class="tw"></a>
+                <a href="#" class="fb"></a>
+                <a href="#" class="pn"></a>
+                <a href="#" class="gp"></a>
+                <p class="phone_number">(416) 555-5252</p>
+                <p class="email_adress">hello@treehouse.com</p>
+            </div>
+        </div>
+    </section>
+    
     <footer class="footer">
         <h5>© 2015 - Все права защищены</h5>
     </footer>
