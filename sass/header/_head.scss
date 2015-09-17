@@ -1,7 +1,30 @@
 .header {
-	position: absolute;
-	top: 50px;
+	position: fixed;
+	top: 40px;
 	display: block;
 	width: 100%;
 	z-index: 9;
+	@include transition (0.5s);
+}
+
+.header--onScroll {
+	position: fixed;
+	display: block;
+	width: 100%;
+	top: 0;
+	padding: 10px 0;
+	background-color: #2B353A;
+	z-index: 99;
+}
+
+@media only screen and (max-width: 1200px) {
+	.header {
+		position: absolute;
+		width: 1170px;
+	}
+	.header--onScroll {
+		position: absolute;
+		width: 1170px;
+		top: 40px;
+	}
 }

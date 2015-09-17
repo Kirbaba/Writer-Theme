@@ -54,3 +54,13 @@ $(function() {
     });
 });
 
+$(window).scroll(function() {
+    if ($(".header").offset().top > 50) {
+        $(".header").addClass("header--onScroll"); 
+        $(".header--onScroll").removeClass(".header");       
+    } else {
+        $(".header--onScroll").addClass("header"); 
+        $(".header").removeClass("header--onScroll");        
+    }
+});
+
