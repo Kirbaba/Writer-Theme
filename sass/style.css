@@ -223,7 +223,7 @@ b {
   width: 100%;
   position: relative;
   height: 750px;
-  background-image: url("../img/entry.png");
+  background-image: url("../img/entry-1.png");
   background-repeat: no-repeat;
   background-position: 50% 0;
   -webkit-background-size: 100%;
@@ -326,6 +326,7 @@ b {
       height: 318px;
       z-index: 9;
       bottom: 0;
+      right: 55%;
       text-align: center;
       word-spacing: nowrap;
       vertical-align: middle; }
