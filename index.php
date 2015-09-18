@@ -391,8 +391,7 @@
     </section>
 
     <section class="contactme"> 
-        <a id="go_contacts"></a>
-                       
+        <a id="go_contacts"></a>                       
             <h1 class="block_title">Свяжитесь со мной</h1>
             <div class="contactme__form">
                 <form action="#">
