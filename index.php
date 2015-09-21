@@ -62,9 +62,9 @@
 <!--            </div>-->
 <!--        </div>-->
     </section>
-
+   
     <section class="services">
-        <a id="go_serv"></a>
+      <a id="go_serv"></a>
         <div class="services__arrow"></div>
         <h1 class="block_title">Услуги</h1>
         <div class="fotorama" data-minwidth="100%" data-maxheight="760" data-fit="scaledown" data-nav="false" data-autoplay="true" >
@@ -394,12 +394,13 @@
         <a id="go_contacts"></a>                       
             <h1 class="block_title">Свяжитесь со мной</h1>
             <div class="contactme__form">
-                <form action="#">
+                <!-- <form action="#">
                     <input type="text" class="contactme__form--input" placeholder="Ваше имя">
                     <input type="text" class="contactme__form--input" placeholder="email">
                     <textarea class="contactme__form--text" placeholder="Сообщение"></textarea>
                     <input type="submit" class="contactme__form--sub" value="Отправить"></div>  
-                </form>
+                </form> -->
+                <?php echo do_shortcode("[contact-form-7 id='5' title='form']"); ?>
             </div>
             <div class="contactme__forum">
                 <a href="#">перейти на форум</a>

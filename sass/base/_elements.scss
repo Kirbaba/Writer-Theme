@@ -18,3 +18,100 @@
 		background-image: url("../img/magnifier13-1.png");
 	}
 }	
+
+.button-buy {
+	display: inline-block;
+	background-image: url("../img/marker20.png");
+	width: 25px;
+	height: 23px;
+	margin: 0 25px;
+	&:hover {
+		background-image: url("../img/marker20-1.png");
+	}
+}
+
+.button-search {
+	display: inline-block;
+	background-image: url("../img/magnifier13.png");
+	width: 23px;
+	height: 23px;	
+	&:hover {
+		background-image: url("../img/magnifier13-1.png");
+	}
+}	
+
+.phone_number  {
+	background-image: url('../img/iPhone-potrait.png');
+	background-position: 0 50%;
+}
+
+.email_adress {
+	background-image: url('../img/email.png');
+	background-position: 0 50%;
+}
+
+.tw {
+	background-image: url('../img/Twitter.png');
+	&:hover {
+		background-image: url('../img/Twitter-1.png');
+	}
+}
+
+.fb {
+	background-image: url('../img/Facebook.png');
+	&:hover {
+		background-image: url('../img/Facebook-1.png');
+	}
+}
+
+.pn {
+	background-image: url('../img/Pinterest.png');
+	&:hover {
+		background-image: url('../img/Pinterest-1.png');
+	}
+}
+
+.gp {
+	background-image: url('../img/Google.png');
+	&:hover {
+		background-image: url('../img/Google-1.png');
+	}
+}
+
+a#go_serv {
+    display: block;
+    position: relative;
+    top: -49px;
+}
+
+a#go_store {
+    display: block;
+    position: relative;
+    top: -70px;
+}
+
+a#go_materials {
+    display: block;
+    position: relative;
+    top: -60px;
+}
+
+a#go_contacts {
+    display: block;
+    position: relative;
+    top: -55px;
+}
+
+a#go_about {
+	display: block;
+	position: relative;
+	top: -110px;
+}
+
+span.wpcf7-not-valid-tip {
+	display: none;
+}
+
+.wpcf7-response-output.wpcf7-display-none.wpcf7-validation-errors {
+    margin-top: 55px;
+}

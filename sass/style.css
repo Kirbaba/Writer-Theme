@@ -138,6 +138,23 @@ b {
   .button-search:hover {
     background-image: url("../img/magnifier13-1.png"); }
 
+.button-buy {
+  display: inline-block;
+  background-image: url("../img/marker20.png");
+  width: 25px;
+  height: 23px;
+  margin: 0 25px; }
+  .button-buy:hover {
+    background-image: url("../img/marker20-1.png"); }
+
+.button-search {
+  display: inline-block;
+  background-image: url("../img/magnifier13.png");
+  width: 23px;
+  height: 23px; }
+  .button-search:hover {
+    background-image: url("../img/magnifier13-1.png"); }
+
 .phone_number {
   background-image: url("../img/iPhone-potrait.png");
   background-position: 0 50%; }
@@ -166,6 +183,37 @@ b {
   .gp:hover {
     background-image: url("../img/Google-1.png"); }
 
+a#go_serv {
+  display: block;
+  position: relative;
+  top: -49px; }
+
+a#go_store {
+  display: block;
+  position: relative;
+  top: -70px; }
+
+a#go_materials {
+  display: block;
+  position: relative;
+  top: -60px; }
+
+a#go_contacts {
+  display: block;
+  position: relative;
+  top: -55px; }
+
+a#go_about {
+  display: block;
+  position: relative;
+  top: -110px; }
+
+span.wpcf7-not-valid-tip {
+  display: none; }
+
+.wpcf7-response-output.wpcf7-display-none.wpcf7-validation-errors {
+  margin-top: 55px; }
+
 .navigation {
   float: right;
   display: block;
@@ -174,7 +222,8 @@ b {
     list-style-type: none;
     padding: 0;
     transition: all .3s ease .15s;
-    display: inline-block; }
+    display: inline-block;
+    margin: 0; }
     .navigation ul li {
       display: inline-block;
       padding-left: 30px;
@@ -206,7 +255,7 @@ b {
   width: 100%;
   top: 0;
   padding: 10px 0;
-  background-color: #2B353A;
+  background-color: #2E3B47;
   z-index: 99; }
 
 @media only screen and (max-width: 1200px) {
@@ -225,7 +274,7 @@ b {
   height: 750px;
   background-image: url("../img/entry-1.png");
   background-repeat: no-repeat;
-  background-position: 50% 0;
+  background-position: 50% 100%;
   -webkit-background-size: 100%;
   -o-background-size: 100%;
   background-size: 100%;
@@ -326,7 +375,6 @@ b {
       height: 318px;
       z-index: 9;
       bottom: 0;
-      right: 55%;
       text-align: center;
       word-spacing: nowrap;
       vertical-align: middle; }
