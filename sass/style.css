@@ -274,7 +274,7 @@ span.wpcf7-not-valid-tip {
   height: 750px;
   background-image: url("../img/entry-1.png");
   background-repeat: no-repeat;
-  background-position: 50% 100%;
+  background-position: 50% 0%;
   -webkit-background-size: 100%;
   -o-background-size: 100%;
   background-size: 100%;
@@ -333,24 +333,24 @@ span.wpcf7-not-valid-tip {
       display: block;
       float: left;
       color: #fff;
-      font-family: "Myriad Pro";
       font-size: 14px;
       text-align: center;
       text-transform: uppercase;
       width: 124px;
       height: 36px;
-      -webkit-border-radius: 4px;
-      -moz-border-radius: 4px;
-      -ms-border-radius: 4px;
-      border-radius: 4px;
       -o-background-clip: padding-box;
       background-clip: padding-box;
-      background-color: #35ade9;
+      background-color: #37bbdd;
       line-height: 38px;
       text-decoration: none;
-      margin-top: 25px; }
+      margin-top: 25px;
+      -webkit-transition: all 0.3s linear;
+      -moz-transition: all 0.3s linear;
+      -ms-transition: all 0.3s linear;
+      -o-transition: all 0.3s linear;
+      transition: all 0.3s linear; }
       .aboutme__text a:hover {
-        background-color: #1795d4; }
+        background-color: #21a0c0; }
     .aboutme__text--line {
       display: block;
       float: left;

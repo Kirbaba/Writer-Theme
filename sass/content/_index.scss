@@ -5,7 +5,7 @@
 	height: 750px;
 	background-image: url("../img/entry-1.png");
 	background-repeat: no-repeat;
-	background-position: 50% 100%;
+	background-position: 50% 0%;
 	-webkit-background-size: 100%;
 	     -o-background-size: 100%;
 	        background-size: 100%;
@@ -68,24 +68,23 @@
 			font-family: $book;
 			font-weight: bold;
 		}
-		a {
-			display: block;
+		a {			
+			display: block;			
 			float: left;
 			color: #fff;
-			font-family: "Myriad Pro";
 			font-size: 14px;
 			text-align: center;
 			text-transform: uppercase;
 			width: 124px;
 			height: 36px;
-			@include border-radius(4px);
 			@include background-clip(padding-box);
-			background-color: #35ade9;
+			background-color: #37bbdd;
 			line-height: 38px;
 			text-decoration: none;
 			margin-top: 25px;
+			@include transition(0.3s);
 			&:hover {
-				background-color: darken(#35ade9, 10%);
+				background-color: darken(#37bbdd, 10%);
 			}
 		}
 		&--line {
