@@ -21,21 +21,19 @@
 			font-family: $bold;
 			text-align: right;
 			margin-bottom: 0;
+			letter-spacing: 2px;
 		}
 		h3 {
 			font-family: $light;
-			font-size: 52px;
+			font-size: 40px;
 			text-align: right;
 			margin: 0 0 10px 0;
 		}
 		p {
-			margin: 0;
-			font-size: 28px;
+			margin: 35px 0 0;
+			font-size: 34px;
 			font-family: $book;
-			span {
-				display: block;
-				font-size: 30px;
-			}
+			float: right;			
 		}
 	}
 }
@@ -135,6 +133,17 @@
 			height: 459px;
 			right: 5%;
 			top: -160px;
+			&:after {
+				content: "";
+				display: inline-block;
+				height: 100%;
+				vertical-align: middle;
+			}
+			img {
+				max-width: 100%;
+				min-height: 100%;
+				vertical-align: middle;
+			}
 		}
 	}
 }

@@ -289,19 +289,18 @@ span.wpcf7-not-valid-tip {
       font-size: 86px;
       font-family: "BebasNeue_Bold";
       text-align: right;
-      margin-bottom: 0; }
+      margin-bottom: 0;
+      letter-spacing: 2px; }
     .entry__text h3 {
       font-family: "BebasNeue_Light";
-      font-size: 52px;
+      font-size: 40px;
       text-align: right;
       margin: 0 0 10px 0; }
     .entry__text p {
-      margin: 0;
-      font-size: 28px;
-      font-family: "BebasNeue_Book"; }
-      .entry__text p span {
-        display: block;
-        font-size: 30px; }
+      margin: 35px 0 0;
+      font-size: 34px;
+      font-family: "BebasNeue_Book";
+      float: right; }
 
 .aboutme {
   display: inline-block;
@@ -394,6 +393,15 @@ span.wpcf7-not-valid-tip {
       height: 459px;
       right: 5%;
       top: -160px; }
+      .aboutme__photo--back:after {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle; }
+      .aboutme__photo--back img {
+        max-width: 100%;
+        min-height: 100%;
+        vertical-align: middle; }
 
 .services {
   display: inline-block;
