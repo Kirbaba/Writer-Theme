@@ -6,7 +6,12 @@
 <table class="admin-table">
     <tr>
         <td valign="top" style="padding-right: 20px">
-            <form class='main_slider' action="/wp-admin/admin.php?page=about_me" method="post" name="about_me">
+            <form class='main_slider' action="/wp-admin/admin.php?page=about_me" method="post" name="about_me-text">
+                <p><b>Основной текст блока:</b></p>
+                <p><textarea name="aboutme__admin_text" id="aboutme__admin_text" cols="30" rows="10"></textarea></p>
+                <p><input type='submit' value='Отправить'/></p>
+            </form>
+            <form class='main_slider' action="/wp-admin/admin.php?page=about_me" method="post" name="about_me">               
                 <p><b>Выберите переднее (маленькое) изображение:</b><br>
                 <p><img class="custom_media_image" src="" alt="" style="width: 80px;"></p>
                 <p><button class="custom_media_upload">Загрузить</button></p>
@@ -22,6 +27,8 @@
     <tr>
         <td valign="top">
             <table style="width: 100%">
+                <caption>Текущий текст</caption>
+                    {aboutme_currenttext}
                 <caption>Текущие изображения</caption>
                 <tr>
                     <td style="padding-right: 10px">

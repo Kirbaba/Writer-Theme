@@ -81,6 +81,7 @@ add_action('admin_head', 'admin_js');
 // Обо мне
 function about_me(){
     global $wpdb;
+    global $wpdbn;
 
     if (function_exists('wp_enqueue_media')) {
         wp_enqueue_media();
@@ -91,7 +92,9 @@ function about_me(){
     }
 
     $curr_photos = $wpdb->get_results( "SELECT * FROM `about_me`");
+    
     //prn($curr_photos);
+    //prn($curr_text);
 
     if(isset($_POST['attachment_url'])){
         if(isset($_POST['changed']) || !empty($curr_photos)){
@@ -106,9 +109,30 @@ function about_me(){
 
         echo mysql_error();
     }
+    $curr_text = $wpdb->get_results( "SELECT * FROM `about_me-text`");
+     if(isset($_POST['aboutme__admin_text'])){
+        if(isset($_POST['changed']) || !empty($curr_text)){
+            $wpdb->update('about_me-text',array("txt" => $_POST['aboutme__admin_text']), array('id' => "1"));
+            $message = "Текст успешно обновлен!";
+        }else{
+            $wpdb->insert('about_me-text', array("txt" => $_POST['aboutme__admin_text']));
+            $message = "Текст успешно обновлен!";
+        }
+
+        echo mysql_error();
+    }
 
 
     $generate = '';
+    $generate2 = '';
+
+    $aboutme_currenttext = $wpdb->get_results("SELECT * FROM aboutme__admin_text");
+    foreach ($aboutme_currenttext as $aboutme_currenttexts) {
+        $aboutme_currenttext .= "<tr data-id='".$aboutme_currenttexts->id."'>
+            <td class='curr_img' style='padding-right: 10px'><img  src='". $aboutme_currenttexts->txt. "' alt='' style='width: 100px;'/></td>            
+            <td><a href='#' class='change_about'>Редактировать</a></td>
+        </tr>";
+    }
 
     $slides = $wpdb->get_results("SELECT * FROM about_me");
     foreach ($slides as $slide) {
@@ -121,7 +145,7 @@ function about_me(){
 
 
     $parser = new Parser();
-    $parser->parse(TM_DIR."/views/admin_about.php",array('slides'=>$generate,
+    $parser->parse(TM_DIR."/views/admin_about.php",array('slides'=>$generate, 'aboutme_currenttext'=>$generate2,
         'message'=>$message), true);
 }
 //Обо мне (шорткод)
