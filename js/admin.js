@@ -33,7 +33,7 @@ jQuery(document).ready(function ($) {
         return false;
     });
 
-    //редактирование обо мне
+    //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅ
     jQuery(document).on('click','.change_about', function(){
         //console.log(jQuery(this));
         var id = jQuery(this).parent().parent().attr('data-id');
@@ -57,7 +57,7 @@ jQuery(document).ready(function ($) {
         }
         return false;
     });
-    //редактирование магазина
+    //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     jQuery(document).on('click','.change_book', function(){
         //console.log(jQuery(this));
         var id = jQuery(this).parent().parent().attr('data-book-id');
@@ -84,7 +84,7 @@ jQuery(document).ready(function ($) {
         }
         return false;
     });
-    //редактирование магазина
+    //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     jQuery(document).on('click','.change_free_book', function(){
         //console.log(jQuery(this));
         var id = jQuery(this).parent().parent().attr('data-book-id');
@@ -111,7 +111,7 @@ jQuery(document).ready(function ($) {
         }
         return false;
     });
-    //редактирование обо мне
+    //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅ
     jQuery(document).on('click','.change_slide', function(){
         //console.log(jQuery(this));
         var id = jQuery(this).parent().parent().attr('data-id');
@@ -150,4 +150,18 @@ jQuery(document).ready(function ($) {
         }
         return false;
     });
+
+    jQuery('.custom_media_upload').click(function() {
+        var send_attachment_bkp = wp.media.editor.send.attachment;
+        wp.media.editor.send.attachment = function(props, attachment) {
+            jQuery('.custom_media_image').attr('src', attachment.url);
+            jQuery('.custom_media_url').val(attachment.url);
+// jQuery('.custom_media_id').val(attachment.id);
+            wp.media.editor.send.attachment = send_attachment_bkp;
+        }
+        wp.media.editor.open();
+        return false;
+    });
+
 });
+

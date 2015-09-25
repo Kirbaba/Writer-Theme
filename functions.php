@@ -1,5 +1,10 @@
 <?php
 
+define('WRITE_THEME_DIR', plugin_dir_path(__FILE__));
+define('WRITE_THEME_URL', plugin_dir_url(__FILE__));
+
+require_once(WRITE_THEME_DIR."/lib/parser_write_theme.php");
+require_once(WRITE_THEME_DIR."/lib/write_theme.php");
 
 define('TM_DIR', get_template_directory(__FILE__));
 define('TM_URL', get_template_directory_uri(__FILE__));
@@ -77,6 +82,14 @@ function admin_js() {
     echo "<script type='text/javascript' src='$url'></script>";
 }
 add_action('admin_head', 'admin_js');
+
+if (function_exists('wp_enqueue_media')) {
+    wp_enqueue_media();
+} else {
+    wp_enqueue_style('thickbox');
+    wp_enqueue_script('media-upload');
+    wp_enqueue_script('thickbox');
+}
 
 // Обо мне
 function about_me(){
@@ -452,3 +465,78 @@ function service_sc(){
     return $generate;
 }
 add_shortcode('service', 'service_sc');
+
+
+
+
+function write_menu_page(){
+    add_menu_page( 'Добавить отзыв', 'Добавить отзыв', 'administrator', 'write_reviews', 'write_reviews_admin_page' );
+}
+
+add_action('admin_menu', 'write_menu_page');
+
+
+
+
+function write_reviews_admin_page(){
+    $parser = new Parser_write_theme();
+    if(isset($_GET['action'])) {
+        if ($_GET['action'] == 'add_reviews') {
+            $parser->parse(WRITE_THEME_DIR . "/view/add_reviews_view.php", array(), true);
+        }
+
+        if ($_GET['action'] == 'del') {
+            $gen =new write_theme();
+            $del = $gen->delete_reviews($_GET['id']);
+            print_reviews();
+        }
+    }
+    else{
+        if (isset($_POST['reviews'])){
+            $gen = new write_theme();
+            $gen->add_reviews($_POST);
+        }
+
+        echo print_reviews();
+    }
+}
+
+function print_reviews(){
+    $parser = new Parser_write_theme();
+    $gen =new write_theme();
+    $res = $gen->get_reviews();
+    $data['reviews'] = "";
+    foreach ($res as $v) {
+        $data['reviews'] .= $parser->parse(WRITE_THEME_DIR."/view/reviews_box_view.php",array('text' => $v->text_reviews,'fio' => $v->fio,'name' => $v->name,'link' => $v->link,'id' => $v->id_reviews), false);
+    }
+
+    $parser->parse(WRITE_THEME_DIR."/view/reviews_view.php",$data, true);
+}
+
+function reviews_home_short(){
+    $parser = new Parser_write_theme();
+    $gen =new write_theme();
+    $html = '<section class="reviews">
+    <div class="contain">
+        <div class="reviews__arrow"></div>
+        <h1 class="block_title">ОТЗЫВЫ</h1>';
+    $res = $gen->get_reviews();
+        foreach($res as $r){
+            $html .='<div class="reviews__box">
+            <p>'.$r->text_reviews.'</p>
+            <div class="reviews__box--author">
+                <div class="reviews__box--author-img">
+                    <img src="'.$r->link.'">
+                </div>
+                <h4>'.$r->fio.'</h4>
+                <p>'.$r->name.'</p>
+            </div>
+        </div>';
+        }
+    $html .= '</div>
+            </section>';
+   return $html;
+
+
+}
+add_shortcode('reviews','reviews_home_short');
