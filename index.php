@@ -33,7 +33,7 @@
     		<h3>Земля, недвижимость, правовое сопровождение</h3>
     		<p>
                 <?php
-                    $text = get_post( 142 );
+                    $text = get_post( 78 );
                     echo $text->post_content;
                 ?>
             </p>

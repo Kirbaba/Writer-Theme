@@ -387,6 +387,25 @@
 				display: block;
 				float: left;
 				margin-right: 15px;
+				width: 66px;
+				height: 66px;
+				@include border-radius(50%);
+				overflow: hidden;
+				text-align: center;
+				word-spacing: nowrap;
+				vertical-align: middle;
+				&:after {
+					content: "";
+					display: inline-block;
+					height: 100%;
+					vertical-align: middle;
+				}
+				img {
+					max-width: 100%;
+					min-height: 100%;
+					vertical-align: middle;
+				}
+				
 			}
 			h4 {
 				margin-top: 15px;
