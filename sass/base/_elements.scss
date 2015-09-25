@@ -115,3 +115,7 @@ span.wpcf7-not-valid-tip {
 .wpcf7-response-output.wpcf7-display-none.wpcf7-validation-errors {
     margin-top: 55px;
 }
+
+#bbp_topic_submit {
+	@extend .contactme__form--sub;
+}

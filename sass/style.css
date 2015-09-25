@@ -121,6 +121,9 @@ b {
   color: #f7f7f7;
   font-weight: 200; }
 
+#bbpress-forums {
+  font-family: Arial; }
+
 .button-buy {
   display: inline-block;
   background-image: url("../img/marker20.png");
@@ -237,7 +240,7 @@ span.wpcf7-not-valid-tip {
         .navigation ul li a:hover {
           color: #38BBDD; }
 
-.header {
+.header, .header--page {
   position: fixed;
   top: 40px;
   display: block;
@@ -258,8 +261,15 @@ span.wpcf7-not-valid-tip {
   background-color: #2E3B47;
   z-index: 99; }
 
+.header--page {
+  position: relative;
+  display: inline-block;
+  top: 0;
+  padding: 10px 0;
+  background-color: #2E3B47; }
+
 @media only screen and (max-width: 1200px) {
-  .header {
+  .header, .header--page {
     position: absolute;
     width: 1170px; }
 
@@ -672,7 +682,7 @@ span.wpcf7-not-valid-tip {
       color: #525252;
       font-size: 15px;
       font-family: "BebasNeue_Regular"; }
-    .contactme__form--sub {
+    .contactme__form--sub, #bbp_topic_submit {
       display: block;
       float: right;
       width: 132px;
@@ -691,7 +701,7 @@ span.wpcf7-not-valid-tip {
       color: #525252;
       font-family: "BebasNeue_Regular";
       cursor: pointer; }
-      .contactme__form--sub:hover, .contactme__form--sub:active, .contactme__form--sub:focus {
+      .contactme__form--sub:hover, #bbp_topic_submit:hover, .contactme__form--sub:active, #bbp_topic_submit:active, .contactme__form--sub:focus, #bbp_topic_submit:focus {
         background-color: #43D9E5;
         color: #fff; }
   .contactme__forum {
@@ -763,6 +773,11 @@ span.wpcf7-not-valid-tip {
       padding: 15px 0 15px 50px;
       margin-top: 10px;
       background-repeat: no-repeat; }
+
+.single {
+  display: block;
+  width: 100%;
+  margin: 75px 0; }
 
 .footer {
   display: inline-block;

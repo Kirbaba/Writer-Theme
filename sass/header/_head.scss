@@ -17,6 +17,15 @@
 	z-index: 99;
 }
 
+.header--page {
+	@extend .header;
+	position: relative;
+	display: inline-block;
+	top: 0;
+	padding: 10px 0;
+	background-color: #2E3B47;
+}
+
 @media only screen and (max-width: 1200px) {
 	.header {
 		position: absolute;

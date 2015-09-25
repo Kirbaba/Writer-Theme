@@ -12,15 +12,15 @@
     <?php wp_head(); ?>
 </head>
 <body>
-    <header class="header">
+    <header class="header--page">
     	<nav class="navigation">
     		<ul>
-    			<li><a href="#go_about" class="smoothScroll">обо мне</a></li>
-    			<li><a href="#go_serv" class="smoothScroll">услуги</a></li>
-    			<li><a href="#go_store" class="smoothScroll">Магазин</a></li>
-    			<li><a href="#go_materials" class="smoothScroll">бесплатные материалы</a></li>
+    			<li><a href="<?php echo get_home_url();?>#go_about">обо мне</a></li>
+    			<li><a href="<?php echo get_home_url();?>#go_serv">услуги</a></li>
+    			<li><a href="<?php echo get_home_url();?>#go_store">Магазин</a></li>
+    			<li><a href="<?php echo get_home_url();?>#go_materials">бесплатные материалы</a></li>
     			<li><a href="#nowhere">форум</a></li>
-    			<li><a href="#go_contacts" class="smoothScroll">КОНТАКТЫ</a></li>    			
+    			<li><a href="<?php echo get_home_url();?>#go_contacts">КОНТАКТЫ</a></li>    			
     		</ul>
     		<a href="#nowhere" class="button-buy"></a>
 			<a href="#nowhere" class="button-search"></a>
