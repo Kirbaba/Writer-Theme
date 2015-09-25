@@ -125,10 +125,10 @@ function about_me(){
     $curr_text = $wpdb->get_results( "SELECT * FROM `about_me-text`");
      if(isset($_POST['aboutme__admin_text'])){
         if(isset($_POST['changed']) || !empty($curr_text)){
-            $wpdb->update('about_me-text',array("txt" => $_POST['aboutme__admin_text']), array('id' => "1"));
+            $wpdb->update('about_me-text',array("txt" => $_POST['aboutme__admin_text'],"link" => $_POST['aboutme__admin_link']), array('id' => "1"));
             $message = "Текст успешно обновлен!";
         }else{
-            $wpdb->insert('about_me-text', array("txt" => $_POST['aboutme__admin_text']));
+            $wpdb->insert('about_me-text', array("txt" => $_POST['aboutme__admin_text'],"link" => $_POST['aboutme__admin_link']));
             $message = "Текст успешно обновлен!";
         }
 
@@ -139,13 +139,15 @@ function about_me(){
     $generate = '';
     $generate2 = '';
 
-    $aboutme_currenttext = $wpdb->get_results("SELECT * FROM aboutme__admin_text");
-    foreach ($aboutme_currenttext as $aboutme_currenttexts) {
-        $aboutme_currenttext .= "<tr data-id='".$aboutme_currenttexts->id."'>
-            <td class='curr_img' style='padding-right: 10px'><img  src='". $aboutme_currenttexts->txt. "' alt='' style='width: 100px;'/></td>            
-            <td><a href='#' class='change_about'>Редактировать</a></td>
+    $texts = $wpdb->get_results("SELECT * FROM `about_me-text`"); 
+
+    foreach ($texts as $text) {
+        $generate2 .= "
+                <p><b>Текущий текст:</b><br>$text->txt</p>
+                <p><b>Ссылка кнопки 'Узнать больше':</b><br> <a href='#'>$text->link</a></p> 
         </tr>";
     }
+
 
     $slides = $wpdb->get_results("SELECT * FROM about_me");
     foreach ($slides as $slide) {
@@ -158,7 +160,7 @@ function about_me(){
 
 
     $parser = new Parser();
-    $parser->parse(TM_DIR."/views/admin_about.php",array('slides'=>$generate, 'aboutme_currenttext'=>$generate2,
+    $parser->parse(TM_DIR."/views/admin_about.php",array('slides'=>$generate, 'texts'=>$generate2,
         'message'=>$message), true);
 }
 //Обо мне (шорткод)
@@ -183,6 +185,23 @@ function about_me_sc(){
     return $generate;
 }
 add_shortcode('about_me', 'about_me_sc');
+
+//Обо мне (шорткод) - текст
+function about_me_text_sc(){
+    global $wpdb;
+
+    $generate = "";
+
+    $slides = $wpdb->get_results("SELECT * FROM `about_me-text`");
+
+    //prn($slides);
+
+    $generate .= '<p>'.$slides[0]->txt.'</p>
+             <a href="'.$slides[0]->link.'">узнать больше</a>';
+
+    return $generate;
+}
+add_shortcode('about_me_text', 'about_me_text_sc');
 
 //Магазин
 function store(){

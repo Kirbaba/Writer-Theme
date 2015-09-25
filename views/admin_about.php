@@ -3,12 +3,14 @@
     <h2>{message}</h2>
 </div>
 <hr>
+   {texts}
 <table class="admin-table">
     <tr>
         <td valign="top" style="padding-right: 20px">
             <form class='main_slider' action="/wp-admin/admin.php?page=about_me" method="post" name="about_me-text">
-                <p><b>Основной текст блока:</b></p>
-                <p><textarea name="aboutme__admin_text" id="aboutme__admin_text" cols="30" rows="10"></textarea></p>
+                <p><b>Новый текст блока:</b></p>
+                <p><textarea name="aboutme__admin_text" id="aboutme__admin_text" cols="30" rows="10" placeholder="Введите текс"></textarea></p>
+                <p><input name="aboutme__admin_link" id="aboutme__admin_link" type="text" placeholder="Введите новую ссылку"></p>
                 <p><input type='submit' value='Отправить'/></p>
             </form>
             <form class='main_slider' action="/wp-admin/admin.php?page=about_me" method="post" name="about_me">               
@@ -25,10 +27,9 @@
         </td>
     </tr>
     <tr>
-        <td valign="top">
+        <td valign="top">            
             <table style="width: 100%">
-                <caption>Текущий текст</caption>
-                    {aboutme_currenttext}
+                
                 <caption>Текущие изображения</caption>
                 <tr>
                     <td style="padding-right: 10px">
