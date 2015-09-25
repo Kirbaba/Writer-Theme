@@ -404,6 +404,7 @@
                     <input type="submit" class="contactme__form--sub" value="Отправить"></div>  
                 </form> -->
                 <?php echo do_shortcode("[contact-form-7 id='5' title='form']"); ?>
+                <? do_shortcode("[bbp-forum-index]");?>
             </div>
             <div class="contactme__forum">
                 <a href="#">перейти на форум</a>
