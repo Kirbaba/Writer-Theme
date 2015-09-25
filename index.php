@@ -32,7 +32,11 @@
     		<h1>Владимир Гойдин</h1>
     		<h3>Земля, недвижимость, правовое сопровождение</h3>
     		<p>
-				<b>Viam supervadet vadens</b> (лат.) — «Дорогу осилит идущий»</p>
+                <?php
+                    $text = get_post( 142 );
+                    echo $text->post_content;
+                ?>
+            </p>
     	</div>
     </section>
 
@@ -353,7 +357,7 @@
         </div>
     </section>
 
-    <section class="reviews">
+  <!--  <section class="reviews">
         <div class="contain">
             <div class="reviews__arrow"></div>
             <h1 class="block_title">ОТЗЫВЫ</h1>
@@ -365,7 +369,7 @@
                     СПАСИБО DIRECT OPTIMUM!</p>
                 <div class="reviews__box--author">
                     <div class="reviews__box--author-img">
-                        <img src="<?php bloginfo('template_directory'); ?>/img/Layer-27.png" alt="">
+                        <img src="<?php /*bloginfo('template_directory'); */?>/img/Layer-27.png" alt="">
                     </div>
                     <h4>Крутилин Александр</h4>
                     <p>Дисконтная система “Друзья”</p>
@@ -379,14 +383,14 @@
                     СПАСИБО DIRECT OPTIMUM!</p>
                 <div class="reviews__box--author">
                     <div class="reviews__box--author-img">
-                        <img src="<?php bloginfo('template_directory'); ?>/img/Layer-28.png" alt="">
+                        <img src="<?php /*bloginfo('template_directory'); */?>/img/Layer-28.png" alt="">
                     </div>
                     <h4>Крутилин Александр</h4>
                     <p>Дисконтная система “Друзья”</p>
                 </div>
             </div>
         </div>
-    </section>
+    </section>-->
     <?php echo do_shortcode("[reviews]");?>
     <section class="contactme"> 
         <a id="go_contacts"></a>                       
