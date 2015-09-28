@@ -119,3 +119,7 @@ span.wpcf7-not-valid-tip {
 #bbp_topic_submit {
 	@extend .contactme__form--sub;
 }
+
+textarea#bbp_topic_content {
+    border: 1px solid #dedede;
+}

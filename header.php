@@ -19,7 +19,7 @@
     			<li><a href="<?php echo get_home_url();?>#go_serv">услуги</a></li>
     			<li><a href="<?php echo get_home_url();?>#go_store">Магазин</a></li>
     			<li><a href="<?php echo get_home_url();?>#go_materials">бесплатные материалы</a></li>
-    			<li><a href="#nowhere">форум</a></li>
+    			<li><a href="<?php echo get_permalink(23); ?>">форум</a></li>
     			<li><a href="<?php echo get_home_url();?>#go_contacts">КОНТАКТЫ</a></li>    			
     		</ul>
     		<a href="#nowhere" class="button-buy"></a>

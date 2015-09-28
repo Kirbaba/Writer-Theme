@@ -217,6 +217,9 @@ span.wpcf7-not-valid-tip {
 .wpcf7-response-output.wpcf7-display-none.wpcf7-validation-errors {
   margin-top: 55px; }
 
+textarea#bbp_topic_content {
+  border: 1px solid #dedede; }
+
 .navigation {
   float: right;
   display: block;
