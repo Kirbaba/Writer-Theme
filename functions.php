@@ -3,8 +3,8 @@
 define('WRITE_THEME_DIR', plugin_dir_path(__FILE__));
 define('WRITE_THEME_URL', plugin_dir_url(__FILE__));
 
-require_once(WRITE_THEME_DIR."/lib/parser_write_theme.php");
-require_once(WRITE_THEME_DIR."/lib/write_theme.php");
+require_once(WRITE_THEME_DIR."lib/Parser_write_theme.php");
+require_once(WRITE_THEME_DIR."lib/Write_theme.php");
 
 define('TM_DIR', get_template_directory(__FILE__));
 define('TM_URL', get_template_directory_uri(__FILE__));
