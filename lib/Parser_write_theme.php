@@ -17,4 +17,13 @@ class Parser_write_theme {
         }
     }
 
+    public static function render($tpl, $data = array()){
+        if(!empty($data)){
+            foreach($data as $k => $v){
+                ${$k} = $v;
+            }
+        }
+        include_once($tpl);
+    }
+
 } 

@@ -64,4 +64,19 @@ $(window).scroll(function() {
     }
 });
 
+$(document).ready(function(){
+    $('.search_btn').on('click', function(){
+        var s = $('.search_input').val();
+        $.ajax({
+            url: ajaxurl, //url, к которому обращаемся
+            type: "POST",
+            data: "action=get_search&s=" +s, //данные, которые передаем. Обязательно для action указываем имя нашего хука
+            success: function(data){
+                /*console.log(data);*/
+                $('.searchResultBox').html(data);
+            }
+        });
+    });
+});
+
 

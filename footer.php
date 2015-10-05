@@ -16,5 +16,15 @@
         <h5>© 2015 - Все права защищены</h5>
     </footer>
 <?php wp_footer(); ?>
+        <script type="text/javascript">
+            addLoadEvent = function(func){if(typeof jQuery!="undefined")jQuery(document).ready(func);else if(typeof wpOnload!='function'){wpOnload=func;}else{var oldonload=wpOnload;wpOnload=function(){oldonload();func();}}};
+            var ajaxurl = '/wp-admin/admin-ajax.php',
+                pagenow = 'toplevel_page_mainpage',
+                typenow = '',
+                adminpage = 'toplevel_page_mainpage',
+                thousandsSeparator = ' ',
+                decimalPoint = ',',
+                isRtl = 0;
+        </script>
 </body>
 </html>

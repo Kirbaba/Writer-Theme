@@ -9,27 +9,26 @@ require_once(WRITE_THEME_DIR."lib/Write_theme.php");
 define('TM_DIR', get_template_directory(__FILE__));
 define('TM_URL', get_template_directory_uri(__FILE__));
 
-require_once TM_DIR.'/parser.php';
+require_once TM_DIR.'/lib/Parser_write_theme.php';
 
-function add_style(){
+function add_style_wt(){
    
     wp_enqueue_style( 'my-styles', get_template_directory_uri() . '/css/style.css', array(), '1');
     wp_enqueue_style( 'my-sass', get_template_directory_uri() . '/sass/style.css', array('my-styles'), '1');
     wp_enqueue_style( 'fotorama', get_template_directory_uri() . '/css/fotorama.css', array('my-styles'), '1');
 }
 
-function add_script(){
+function add_script_wt(){
     wp_enqueue_script( 'jquery', get_template_directory_uri() . '/js/jquery-2.1.3.min.js', array(), '1');
     wp_enqueue_script( 'jq', 'https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js', array(), '1');
     wp_enqueue_script( 'my-bootstrap-extension', get_template_directory_uri() . '/js/bootstrap.js', array(), '1');
     wp_enqueue_script( 'my-script', get_template_directory_uri() . '/js/script.js', array(), '1');
     wp_enqueue_script( 'fotorama-js', get_template_directory_uri() . '/js/fotorama.js', array(), '1');
 
-    
 }
 
-add_action( 'wp_enqueue_scripts', 'add_style' );
-add_action( 'wp_enqueue_scripts', 'add_script' );
+add_action( 'wp_enqueue_scripts', 'add_style_wt' );
+add_action( 'wp_enqueue_scripts', 'add_script_wt' );
 
 function prn($content) {
     echo '<pre style="background: lightgray; border: 1px solid black; padding: 2px">';
@@ -159,7 +158,7 @@ function about_me(){
     }
 
 
-    $parser = new Parser();
+    $parser = new Parser_write_theme();
     $parser->parse(TM_DIR."/views/admin_about.php",array('slides'=>$generate, 'texts'=>$generate2,
         'message'=>$message), true);
 }
@@ -251,7 +250,7 @@ function store(){
     }
 
 
-    $parser = new Parser();
+    $parser = new Parser_write_theme();
     $parser->parse(TM_DIR."/views/admin_store.php",array('slides'=>$generate,
         'message'=>$message), true);
 }
@@ -329,7 +328,7 @@ function free_book(){
     }
 
 
-    $parser = new Parser();
+    $parser = new Parser_write_theme();
     $parser->parse(TM_DIR."/views/admin_free_book.php",array('slides'=>$generate,
         'message'=>$message), true);
 }
@@ -430,7 +429,7 @@ function service(){
     }
 
 
-    $parser = new Parser();
+    $parser = new Parser_write_theme();
     $parser->parse(TM_DIR."/views/admin_service.php",array('slides'=>$generate,
         'message'=>$message), true);
 }
@@ -559,3 +558,35 @@ function reviews_home_short(){
 
 }
 add_shortcode('reviews','reviews_home_short');
+
+
+
+//Поиск по сайту
+
+function search_function(){
+    $parser = new Parser_write_theme();
+    if(isset($_POST['s'])){
+        $parser->render(WRITE_THEME_DIR."/view/search_result.php",[]);
+    }
+    else {
+        $parser->render(WRITE_THEME_DIR."/view/search_page.php",[]);
+    }
+}
+
+function getSearch(){
+    global $wpdb;
+    $parser = new Parser_write_theme();
+
+    $s = $_POST['s'];
+
+    $result['title'] = $_POST['s'];
+    $result['posts'] = $wpdb->get_results("SELECT * FROM wp_posts WHERE post_title LIKE '%$s%'");
+
+    $parser->render(WRITE_THEME_DIR."/view/search_result.php",['result' => $result]);
+    die();
+}
+
+add_shortcode('search','search_function');
+add_action('wp_ajax_nopriv_get_search', 'getSearch');
+add_action('wp_ajax_get_search', 'getSearch');
+
