@@ -23,7 +23,7 @@
     			<li><a href="#go_contacts" class="smoothScroll">КОНТАКТЫ</a></li>    			
     		</ul>
     		<a href="#nowhere" class="button-buy"></a>
-			<a href="#nowhere" class="button-search"></a>
+			<a href="/search/" class="button-search"></a>
     	</nav>
     </header>
                               

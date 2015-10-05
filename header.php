@@ -23,6 +23,6 @@
     			<li><a href="<?php echo get_home_url();?>#go_contacts">КОНТАКТЫ</a></li>    			
     		</ul>
     		<a href="#nowhere" class="button-buy"></a>
-			<a href="#nowhere" class="button-search"></a>
+			<a href="/search/" class="button-search"></a>
     	</nav>
     </header>

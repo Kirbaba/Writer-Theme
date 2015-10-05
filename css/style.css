@@ -32,3 +32,7 @@
 .searchItemTitle {
     font-size: 20px;
 }
+
+.searchResultBox {
+    min-height: 300px;
+}
