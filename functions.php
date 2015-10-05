@@ -9,8 +9,6 @@ require_once(WRITE_THEME_DIR."lib/Write_theme.php");
 define('TM_DIR', get_template_directory(__FILE__));
 define('TM_URL', get_template_directory_uri(__FILE__));
 
-require_once TM_DIR.'/lib/Parser_write_theme.php';
-
 function add_style_wt(){
    
     wp_enqueue_style( 'my-styles', get_template_directory_uri() . '/css/style.css', array(), '1');
@@ -81,14 +79,6 @@ function admin_js() {
     echo "<script type='text/javascript' src='$url'></script>";
 }
 add_action('admin_head', 'admin_js');
-
-if (function_exists('wp_enqueue_media')) {
-    wp_enqueue_media();
-} else {
-    wp_enqueue_style('thickbox');
-    wp_enqueue_script('media-upload');
-    wp_enqueue_script('thickbox');
-}
 
 // Обо мне
 function about_me(){
@@ -256,29 +246,21 @@ function store(){
 }
 //Магазин (шорткод)
 function store_sc(){
-    global $wpdb;
+    $type = 'store';
+    $args = array(
+        'post_type' => $type,
+        'post_status' => 'publish',
+        'posts_per_page' => -1);
 
-    $generate = "";
+    $my_query = null;
+    $my_query = new WP_Query($args);
 
-    $books = $wpdb->get_results("SELECT * FROM store");
-    foreach ($books as $book) {
-        $generate .= '<a href="'.$book->link.'">
-                <div class="store__box">
-                    <img src="'.$book->img.'" alt="">
-                    <div class="store__box--text">
-                        <h4>'.$book->title.'</h4>
-                        <p>'.$book->descr.'</p>
-                    </div>
-                    <div class="store__box--price">
-                        <h4>'.$book->price.'</h4>
-                    </div>
-                </div>
-            </a>';
-    }
-
-    return $generate;
+    $parser = new Parser_write_theme();
+    $parser->render(TM_DIR . '/views/storetpl.php', ['my_query' => $my_query]);
 }
 add_shortcode('store', 'store_sc');
+
+
 
 //Бесплатные материаы (админка)
 function free_book(){
@@ -334,27 +316,17 @@ function free_book(){
 }
 //Бесплатные материалы (шорткод)
 function free_book_sc(){
-    global $wpdb;
+    $type = 'freestore';
+    $args = array(
+        'post_type' => $type,
+        'post_status' => 'publish',
+        'posts_per_page' => -1);
 
-    $generate = "";
+    $my_query = null;
+    $my_query = new WP_Query($args);
 
-    $books = $wpdb->get_results("SELECT * FROM free_book");
-    foreach ($books as $book) {
-        $generate .= '<a href="'.$book->link.'">
-                <div class="store__box">
-                    <img src="'.$book->img.'" alt="">
-                    <div class="store__box--text">
-                        <h4>'.$book->title.'</h4>
-                        <p>'.$book->descr.'</p>
-                    </div>
-                    <div class="store__box--price">
-                        <h4>'.$book->price.'</h4>
-                    </div>
-                </div>
-            </a>';
-    }
-
-    return $generate;
+    $parser = new Parser_write_theme();
+    $parser->render(TM_DIR . '/views/freestoretpl.php', ['my_query' => $my_query]);
 }
 add_shortcode('free_book', 'free_book_sc');
 
@@ -590,3 +562,107 @@ add_shortcode('search','search_function');
 add_action('wp_ajax_nopriv_get_search', 'getSearch');
 add_action('wp_ajax_get_search', 'getSearch');
 
+
+/*------------------------СТРАНИЦА Книги------------------------------*/
+add_action('init', 'my_custom_init_store');
+function my_custom_init_store()
+{
+    $labels = array(
+        'name' => 'Магазин', // Основное название типа записи
+        'singular_name' => 'Товар', // отдельное название записи типа Book
+        'add_new' => 'Добавить товар',
+        'add_new_item' => 'Добавить новый товар',
+        'edit_item' => 'Редактировать товар',
+        'new_item' => 'Новый товар',
+        'view_item' => 'Посмотреть товар',
+        'search_items' => 'Найти товар',
+        'not_found' =>  'Товаров не найдено',
+        'not_found_in_trash' => 'В корзине товаров не найдено',
+        'parent_item_colon' => '',
+        'menu_name' => 'Магазин'
+
+    );
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'publicly_queryable' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'query_var' => true,
+        'rewrite' => true,
+        'capability_type' => 'post',
+        'has_archive' => true,
+        'hierarchical' => false,
+        'menu_position' => null,
+        'supports' => array('title','editor','thumbnail')
+    );
+    register_post_type('store',$args);
+}
+
+add_action('init', 'my_custom_init_freestore');
+function my_custom_init_freestore()
+{
+    $labels = array(
+        'name' => 'Бесплатные материалы', // Основное название типа записи
+        'singular_name' => 'Товар', // отдельное название записи типа Book
+        'add_new' => 'Добавить товар',
+        'add_new_item' => 'Добавить новый товар',
+        'edit_item' => 'Редактировать товар',
+        'new_item' => 'Новый товар',
+        'view_item' => 'Посмотреть товар',
+        'search_items' => 'Найти товар',
+        'not_found' =>  'Товаров не найдено',
+        'not_found_in_trash' => 'В корзине товаров не найдено',
+        'parent_item_colon' => '',
+        'menu_name' => 'Бесплатные материалы'
+
+    );
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'publicly_queryable' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'query_var' => true,
+        'rewrite' => true,
+        'capability_type' => 'post',
+        'has_archive' => true,
+        'hierarchical' => false,
+        'menu_position' => null,
+        'supports' => array('title','editor','thumbnail')
+    );
+    register_post_type('freestore',$args);
+}
+
+function my_extra_fields() {
+    add_meta_box( 'extra_price', 'Цена', 'extra_fields_box_func', 'store', 'normal', 'high'  );
+}
+add_action('add_meta_boxes', 'my_extra_fields', 1);
+
+function extra_fields_box_func( $post ){
+    ?>
+    <p><span>Введите только цифры.</span><input type="text"  name="extra[price]" value="<?php echo get_post_meta($post->ID, 'price', 1); ?>" style="width:50%" /></p>
+    <?php
+}
+function extra_fields_title_func( $post ){
+    ?>
+    <p><span>Введите подзаголовок.</span><input type="text"  name="extra[subtitle]" value="<?php echo get_post_meta($post->ID, 'subtitle', 1); ?>" style="width:50%" /></p>
+    <?php
+}
+
+add_action('save_post', 'my_extra_fields_update', 10, 1);
+
+/* Сохраняем данные, при сохранении поста */
+function my_extra_fields_update( $post_id ){
+
+    if( !isset($_POST['extra']) ) return false;
+    foreach( $_POST['extra'] as $key=>$value ){
+        if( empty($value) ){
+            delete_post_meta($post_id, $key); // удаляем поле если значение пустое
+            continue;
+        }
+
+        update_post_meta($post_id, $key, $value); // add_post_meta() работает автоматически
+    }
+    return $post_id;
+}
