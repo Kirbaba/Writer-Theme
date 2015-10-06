@@ -185,8 +185,8 @@ function about_me_text_sc(){
 
     //prn($slides);
 
-    $generate .= '<p>'.$slides[0]->txt.'</p>
-             <a href="'.$slides[0]->link.'">узнать больше</a>';
+    $generate .= '<p>'.$slides[0]->txt.'</p>';
+            /* <a href="'.$slides[0]->link.'">узнать больше</a>';*/
 
     return $generate;
 }
@@ -666,3 +666,113 @@ function my_extra_fields_update( $post_id ){
     }
     return $post_id;
 }
+
+// Настройки темы
+
+add_action('customize_register', function($customizer){
+    /*Меню настройки контактов*/
+    $customizer->add_section(
+        'contacts_section',
+        array(
+            'title' => 'Настройки контактов',
+            'description' => 'Контакты',
+            'priority' => 35,
+        )
+    );
+    $customizer->add_setting(
+        'phone_textbox',
+        array('default' => '(416) 555-5252')
+    );
+    $customizer->add_control(
+        'phone_textbox',
+        array(
+            'label' => 'Телефон',
+            'section' => 'contacts_section',
+            'type' => 'text',
+        )
+    );
+    $customizer->add_setting(
+        'email_textbox',
+        array('default' => 'hello@treehouse.com')
+    );
+    $customizer->add_control(
+        'email_textbox',
+        array(
+            'label' => 'Email',
+            'section' => 'contacts_section',
+            'type' => 'text',
+        )
+    );
+
+
+    /*меню настройки соц сетей*/
+    $customizer->add_section(
+        'social_section',
+        array(
+            'title' => 'Соц. сети',
+            'description' => 'Ссылки на соц. сети',
+            'priority' => 35,
+        )
+    );
+    $customizer->add_setting(
+        'tw_textbox',
+        array('default' => 'http://twitter.com/')
+    );
+
+    $customizer->add_setting(
+        'fb_textbox',
+        array('default' => 'http://facebook.com/')
+    );
+
+    $customizer->add_setting(
+        'p_textbox',
+        array('default' => 'https://ru.pinterest.com')
+    );
+
+    $customizer->add_setting(
+        'gpl_textbox',
+        array('default' => 'https://plus.google.com')
+    );
+
+
+
+
+
+    $customizer->add_control(
+        'fb_textbox',
+        array(
+            'label' => 'Facebook',
+            'section' => 'social_section',
+            'type' => 'text',
+        )
+    );
+
+    $customizer->add_control(
+        'gpl_textbox',
+        array(
+            'label' => 'Google+',
+            'section' => 'social_section',
+            'type' => 'text',
+        )
+    );
+
+    $customizer->add_control(
+        'p_textbox',
+        array(
+            'label' => 'Pinterest',
+            'section' => 'social_section',
+            'type' => 'text',
+        )
+    );
+
+
+    $customizer->add_control(
+        'tw_textbox',
+        array(
+            'label' => 'Twitter',
+            'section' => 'social_section',
+            'type' => 'text',
+        )
+    );
+
+});

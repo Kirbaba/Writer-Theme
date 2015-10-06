@@ -36,3 +36,31 @@
 .searchResultBox {
     min-height: 300px;
 }
+
+.text-input {
+    width: 50%;
+    height: 30px;
+    font-size: 20px;
+    padding-left: 10px;
+    border: 1px solid #2B353A;
+    border-radius: 6px;
+}
+
+.wppb-form-field {
+    margin: 20px 0 0 0;
+}
+
+.wppb-form-field label {
+    font-size: 20px;
+    width: 20%;
+    display: block;
+}
+
+.wppb-send-credentials-checkbox label {
+    width: 80%;
+}
+
+#register {
+    padding: 4px;
+    margin: 20px 0 0 0;
+}

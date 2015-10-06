@@ -2,12 +2,12 @@
         <div class="contain">
             <div class="contactinfo__block">
                 <h3>контакты</h3>
-                <a href="#" class="tw"></a>
-                <a href="#" class="fb"></a>
-                <a href="#" class="pn"></a>
-                <a href="#" class="gp"></a>
-                <p class="phone_number">(416) 555-5252</p>
-                <p class="email_adress">hello@treehouse.com</p>
+                <a href="<?php echo get_theme_mod('tw_textbox'); ?>" class="tw"></a>
+                <a href="<?php echo get_theme_mod('fb_textbox'); ?>" class="fb"></a>
+                <a href="<?php echo get_theme_mod('p_textbox'); ?>" class="pn"></a>
+                <a href="<?php echo get_theme_mod('gpl_textbox'); ?>" class="gp"></a>
+                <p class="phone_number"><?php echo get_theme_mod('phone_textbox'); ?></p>
+                <p class="email_adress"><?php echo get_theme_mod('email_textbox'); ?></p>
             </div>
         </div>
     </section>
