@@ -10,14 +10,14 @@ define('TM_DIR', get_template_directory(__FILE__));
 define('TM_URL', get_template_directory_uri(__FILE__));
 
 function add_style_wt(){
-   
+    wp_enqueue_style( 'my-bootstrap-extension', get_template_directory_uri() . '/css/bootstrap.css', array(), '1');
     wp_enqueue_style( 'my-styles', get_template_directory_uri() . '/css/style.css', array(), '1');
     wp_enqueue_style( 'my-sass', get_template_directory_uri() . '/sass/style.css', array('my-styles'), '1');
     wp_enqueue_style( 'fotorama', get_template_directory_uri() . '/css/fotorama.css', array('my-styles'), '1');
 }
 
 function add_script_wt(){
-    wp_enqueue_script( 'jquery', get_template_directory_uri() . '/js/jquery-2.1.3.min.js', array(), '1');
+    //wp_enqueue_script( 'jquery', get_template_directory_uri() . '/js/jq.js', array(), '1');
     wp_enqueue_script( 'jq', 'https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js', array(), '1');
     wp_enqueue_script( 'my-bootstrap-extension', get_template_directory_uri() . '/js/bootstrap.js', array(), '1');
     wp_enqueue_script( 'my-script', get_template_directory_uri() . '/js/script.js', array(), '1');
@@ -68,8 +68,8 @@ add_action('admin_menu', 'admin_menu');
 
 function admin_menu(){
     add_menu_page( 'Настройки "Обо мне"', 'Обо мне', 'manage_options', 'about_me', 'about_me' );
-    add_menu_page( 'Магазин книг', 'Книги', 'manage_options', 'store', 'store' );
-    add_menu_page( 'Бесплатные материалы', 'Материалы', 'manage_options', 'free_book', 'free_book' );
+//    add_menu_page( 'Магазин книг', 'Книги', 'manage_options', 'store', 'store' );
+//    add_menu_page( 'Бесплатные материалы', 'Материалы', 'manage_options', 'free_book', 'free_book' );
     add_menu_page( 'Услуги', 'Услуги', 'manage_options', 'service', 'service' );
 }
 
@@ -83,7 +83,6 @@ add_action('admin_head', 'admin_js');
 // Обо мне
 function about_me(){
     global $wpdb;
-    global $wpdbn;
 
     if (function_exists('wp_enqueue_media')) {
         wp_enqueue_media();
@@ -193,7 +192,7 @@ function about_me_text_sc(){
 add_shortcode('about_me_text', 'about_me_text_sc');
 
 //Магазин
-function store(){
+/*function store(){
     global $wpdb;
 
     if (function_exists('wp_enqueue_media')) {
@@ -243,7 +242,7 @@ function store(){
     $parser = new Parser_write_theme();
     $parser->parse(TM_DIR."/views/admin_store.php",array('slides'=>$generate,
         'message'=>$message), true);
-}
+}*/
 //Магазин (шорткод)
 function store_sc(){
     $type = 'store';
@@ -263,7 +262,7 @@ add_shortcode('store', 'store_sc');
 
 
 //Бесплатные материаы (админка)
-function free_book(){
+/*function free_book(){
     global $wpdb;
 
     if (function_exists('wp_enqueue_media')) {
@@ -313,7 +312,7 @@ function free_book(){
     $parser = new Parser_write_theme();
     $parser->parse(TM_DIR."/views/admin_free_book.php",array('slides'=>$generate,
         'message'=>$message), true);
-}
+}*/
 //Бесплатные материалы (шорткод)
 function free_book_sc(){
     $type = 'freestore';
@@ -456,17 +455,11 @@ function service_sc(){
 }
 add_shortcode('service', 'service_sc');
 
-
-
-
 function write_menu_page(){
     add_menu_page( 'Добавить отзыв', 'Добавить отзыв', 'administrator', 'write_reviews', 'write_reviews_admin_page' );
 }
 
 add_action('admin_menu', 'write_menu_page');
-
-
-
 
 function write_reviews_admin_page(){
     $parser = new Parser_write_theme();
@@ -531,10 +524,7 @@ function reviews_home_short(){
 }
 add_shortcode('reviews','reviews_home_short');
 
-
-
 //Поиск по сайту
-
 function search_function(){
     $parser = new Parser_write_theme();
     if(isset($_POST['s'])){
@@ -561,7 +551,12 @@ function getSearch(){
 add_shortcode('search','search_function');
 add_action('wp_ajax_nopriv_get_search', 'getSearch');
 add_action('wp_ajax_get_search', 'getSearch');
-
+add_action('wp_ajax_nopriv_add_to_cart', 'addToCart');
+add_action('wp_ajax_add_to_cart', 'addToCart');
+add_action('wp_ajax_nopriv_del_from_cart', 'delFromCart');
+add_action('wp_ajax_del_from_cart', 'delFromCart');
+add_action('wp_ajax_nopriv_order', 'set_order');
+add_action('wp_ajax_order', 'set_order');
 
 /*------------------------СТРАНИЦА Книги------------------------------*/
 add_action('init', 'my_custom_init_store');
@@ -666,6 +661,7 @@ function my_extra_fields_update( $post_id ){
     }
     return $post_id;
 }
+
 
 // Настройки темы
 
@@ -776,3 +772,95 @@ add_action('customize_register', function($customizer){
     );
 
 });
+
+function addToCart(){
+    $itemId = $_POST['id'];
+
+    if(isset($_COOKIE['cartCookie'])){
+        $newCookie = $_COOKIE['cartCookie'].','.$itemId;
+    }else{
+        $newCookie = $itemId;
+    }
+
+    setcookie("cartCookie", $newCookie, time()+86400,'/');
+    // prn($newCookie);
+    die();
+}
+
+function delFromCart(){
+    $itemId = $_POST['id'];
+
+    $items = explode(',',$_COOKIE['cartCookie']);
+    //получаем количество одинаковых товаров
+
+
+    foreach($items as $key => $item){
+        if($item == $itemId){
+            unset($items[$key]);
+        }
+    }
+
+    // prn($items);
+    $items = implode(',',$items);
+
+    setcookie("cartCookie", $items, time()+86400,'/');
+    // prn($newCookie);
+    die();
+}
+
+function order_page_sc(){
+
+    $items = explode(',',$_COOKIE['cartCookie']);
+    //получаем количество одинаковых товаров
+
+    if(empty($items[0])){
+        $items[0] = 0;
+    }else{
+        $items = array_count_values($items);
+    }
+   // prn($items);
+    $parser = new Parser_write_theme();
+    $parser->render(TM_DIR . '/views/ordergrid.php', ['items' => $items]);
+}
+
+add_shortcode('order_page', 'order_page_sc');
+
+function set_order(){
+
+    $name = $_POST['name'];
+    $mail = $_POST['mail'];
+    $phone = $_POST['phone'];
+    $address = $_POST['address'];
+
+    $admin_email = get_option('admin_email');
+
+    $items = explode(',',$_COOKIE['cartCookie']);
+    //получаем количество одинаковых товаров
+    $items = array_count_values($items);
+
+
+    $str = "С вашего сайта заказали товар:<br>";
+    $sum = 0;
+    foreach($items as $key => $value){
+        $sum = $sum + $value*get_post_meta($key, 'price', 1);
+
+        $str .= 'ID товара: '.$key.'<br>';
+        $str .= 'Название: '.get_the_title($key).' <br>';
+        $str .= 'Кол-во: '. $value .' <br>';
+        $str .= 'Цена: '. $value*get_post_meta($key, 'price', 1) .' р. <br><br>';
+    }
+
+    $str .= 'Итого: '.$sum.' р. <br><br>';
+    $str .= 'Имя заказчика: '.$name.' <br>';
+    $str .= 'Email : '.$mail.' <br>';
+    $str .= 'Телефон для связи : '.$phone.' <br>';
+    $str .= 'Адресс доставки : '.$address.' <br>';
+
+    mail($admin_email, "Заказ товара с вашего сайта",
+        $str,
+        "Content-type: text/html; charset=UTF-8\r\n");
+
+    setcookie("cartCookie", "", time()+86400,'/');
+    die();
+}
+

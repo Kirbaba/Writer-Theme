@@ -64,3 +64,36 @@
     padding: 4px;
     margin: 20px 0 0 0;
 }
+
+.empty-cart{
+    text-align: center;
+}
+
+.empty-cart a{
+    text-decoration: none;
+}
+
+.modal-title{
+    text-align: center;
+}
+
+.gonext h4{
+    padding-left: 20px;
+}
+
+.goorder h4{
+    padding-right: 20px;
+}
+
+.input-group{
+    padding: 0 20px;
+}
+
+.modal-body{
+    text-align: center;
+}
+
+.order-page-thumb img{
+    width: 130px;
+    height: 200px;
+}
