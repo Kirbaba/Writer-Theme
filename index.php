@@ -45,25 +45,9 @@
         <div class="aboutme__text">
             <div class="aboutme__text--line"></div>
             <h3>Обо мне</h3>
-            <!-- <p>Lorem ipsum dolor sit amet, vel eu illud noluisse gubergren, an sit quidam moderatius, 
-                per at feugiat adipiscing temporibus. Quo ignota eirmod eu, per in saepe eruditi corrumpit. 
-                Vel zril tibique id, vix case docendi et. Duo enim mucius an, per civibus adversarium te. 
-                Eum wisi maiorum fastidii ex, vitae salutatus euripidis usu ea.</p>
-                <p>Lorem ipsum dolor sit amet, vel eu illud noluisse gubergren, an sit quidam moderatius, 
-                    per at feugiat adipiscing temporibus. Quo ignota eirmod eu, per in saepe eruditi 
-                    corrumpit. Vel zril tibique id, </p>
-            <a href="#">узнать больше</a> -->
             <?= do_shortcode('[about_me_text]');?>
         </div>
         <?= do_shortcode('[about_me]');?>
-<!--        <div class="aboutme__photo">-->
-<!--            <div class="aboutme__photo--front">-->
-<!--                <img src="--><?php //bloginfo('template_directory'); ?><!--/img/_MG_0396.png" alt="">-->
-<!--            </div>-->
-<!--            <div class="aboutme__photo--back">-->
-<!--                <img src="--><?php //bloginfo('template_directory'); ?><!--/img/back.png" alt="">-->
-<!--            </div>-->
-<!--        </div>-->
     </section>
    
     <section class="services">
@@ -72,84 +56,6 @@
         <h1 class="block_title">Услуги</h1>
         <div class="fotorama" data-minwidth="100%" data-maxheight="760" data-fit="scaledown" data-nav="false" data-autoplay="true" >
             <?= do_shortcode('[service]');?>
-<!--            <div class="services__container">-->
-<!--                <div class="services__container__col">-->
-<!--                    <div class="services__img">-->
-<!--                        <img src="--><?php //bloginfo('template_directory'); ?><!--/img/3233.png" alt="">-->
-<!--                    </div>-->
-<!--                    <div class="services__text">-->
-<!--                        <div class="services__text--box">-->
-<!--                            <h4>Тренинги по России</h4>-->
-<!--                            <p>Приняли участие на выставке MATE 2015 и представили наши проекты и технологии-->
-<!--                            </p>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="services__container__col">                    -->
-<!--                    <div class="services__text">-->
-<!--                        <div class="services__text--box">-->
-<!--                            <h4>Тренинги в Москве</h4>-->
-<!--                            <p>Приняли участие на выставке MATE 2015 и представили наши проекты и технологии-->
-<!--                            </p>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="services__img">-->
-<!--                        <img src="--><?php //bloginfo('template_directory'); ?><!--/img/Background.png" alt="">-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="services__container__col">-->
-<!--                    <div class="services__img">-->
-<!--                        <img src="--><?php //bloginfo('template_directory'); ?><!--/img/Background-1.png" alt="">-->
-<!--                    </div>-->
-<!--                    <div class="services__text">-->
-<!--                        <div class="services__text--box">-->
-<!--                            <h4>Книги</h4>-->
-<!--                            <p>Приняли участие на выставке MATE 2015 и представили наши проекты и технологии-->
-<!--                            </p>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--           -->
-<!---->
-<!--            <div class="services__container">                -->
-<!--                <div class="services__container__col">-->
-<!--                    <div class="services__img">-->
-<!--                        <img src="--><?php //bloginfo('template_directory'); ?><!--/img/3233.png" alt="">-->
-<!--                    </div>-->
-<!--                    <div class="services__text">-->
-<!--                        <div class="services__text--box">-->
-<!--                            <h4>Тренинги по России</h4>-->
-<!--                            <p>Приняли участие на выставке MATE 2015 и представили наши проекты и технологии-->
-<!--                            </p>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="services__container__col">                    -->
-<!--                    <div class="services__text">-->
-<!--                        <div class="services__text--box">-->
-<!--                            <h4>Тренинги в Москве</h4>-->
-<!--                            <p>Приняли участие на выставке MATE 2015 и представили наши проекты и технологии-->
-<!--                            </p>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="services__img">-->
-<!--                        <img src="--><?php //bloginfo('template_directory'); ?><!--/img/Background.png" alt="">-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="services__container__col">-->
-<!--                    <div class="services__img">-->
-<!--                        <img src="--><?php //bloginfo('template_directory'); ?><!--/img/Background-1.png" alt="">-->
-<!--                    </div>-->
-<!--                    <div class="services__text">-->
-<!--                        <div class="services__text--box">-->
-<!--                            <h4>Книги</h4>-->
-<!--                            <p>Приняли участие на выставке MATE 2015 и представили наши проекты и технологии-->
-<!--                            </p>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
         </div>
     </section>
 
@@ -159,100 +65,6 @@
             <div class="store__arrow"></div>
             <h1 class="block_title">магазин</h1>
             <?= do_shortcode('[store]');?>
-<!--            <a href="#">-->
-<!--                <div class="store__box">-->
-<!--                    <div class="store__box--stars">-->
-<!--                        <span class="star-gld"></span>-->
-<!--                        <span class="star-wht"></span>-->
-<!--                        <span class="star-wht"></span>-->
-<!--                        <span class="star-wht"></span>-->
-<!--                        <span class="star-wht"></span>                        -->
-<!--                    </div>-->
-<!--                    <img src="--><?php //bloginfo('template_directory'); ?><!--/img/Layer-108.png" alt="">-->
-<!--                    <div class="store__box--text">-->
-<!--                        <h4>Книга 1</h4>-->
-<!--                        <p>Lorem ipsum dolor sit amet, consectetur.</p>-->
-<!--                    </div>-->
-<!--                    <div class="store__box--price">-->
-<!--                        <h4>850 руб</h4>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </a>-->
-<!--            <a href="#">-->
-<!--                <div class="store__box">-->
-<!--                     <div class="store__box--stars">-->
-<!--                        <span class="star-wht"></span>-->
-<!--                        <span class="star-wht"></span>-->
-<!--                        <span class="star-wht"></span>-->
-<!--                        <span class="star-wht"></span>-->
-<!--                        <span class="star-wht"></span>                        -->
-<!--                    </div>-->
-<!--                    <img src="--><?php //bloginfo('template_directory'); ?><!--/img/Layer-109.png" alt="">-->
-<!--                    <div class="store__box--text">-->
-<!--                        <h4>Книга 2</h4>-->
-<!--                        <p>Lorem ipsum dolor sit amet, consectetur.</p>-->
-<!--                    </div>-->
-<!--                    <div class="store__box--price">-->
-<!--                        <h4>850 руб</h4>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </a>-->
-<!--            <a href="#">-->
-<!--                <div class="store__box">-->
-<!--                     <div class="store__box--stars">-->
-<!--                        <span class="star-gld"></span>-->
-<!--                        <span class="star-gld"></span>-->
-<!--                        <span class="star-wht"></span>-->
-<!--                        <span class="star-wht"></span>-->
-<!--                        <span class="star-wht"></span>                        -->
-<!--                    </div>-->
-<!--                    <img src="--><?php //bloginfo('template_directory'); ?><!--/img/Layer-111.png" alt="">-->
-<!--                    <div class="store__box--text">-->
-<!--                        <h4>Книга 3</h4>-->
-<!--                        <p>Lorem ipsum dolor sit amet, consectetur.</p>-->
-<!--                    </div>-->
-<!--                    <div class="store__box--price">-->
-<!--                        <h4>850 руб</h4>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </a>-->
-<!--            <a href="#">-->
-<!--                <div class="store__box">-->
-<!--                     <div class="store__box--stars">-->
-<!--                        <span class="star-gld"></span>-->
-<!--                        <span class="star-gld"></span>-->
-<!--                        <span class="star-gld"></span>-->
-<!--                        <span class="star-wht"></span>-->
-<!--                        <span class="star-wht"></span>                        -->
-<!--                    </div>-->
-<!--                    <img src="--><?php //bloginfo('template_directory'); ?><!--/img/Layer-116.png" alt="">-->
-<!--                    <div class="store__box--text">-->
-<!--                        <h4>Книга 4</h4>-->
-<!--                        <p>Lorem ipsum dolor sit amet, consectetur.</p>-->
-<!--                    </div>-->
-<!--                    <div class="store__box--price">-->
-<!--                        <h4>850 руб</h4>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </a>-->
-<!--            <a href="#">-->
-<!--                <div class="store__box">-->
-<!--                     <div class="store__box--stars">-->
-<!--                        <span class="star-wht"></span>-->
-<!--                        <span class="star-wht"></span>-->
-<!--                        <span class="star-wht"></span>                        -->
-<!--                    </div>-->
-<!--                    <img src="--><?php //bloginfo('template_directory'); ?><!--/img/Layer-117.png" alt="">-->
-<!--                    <div class="store__box--text">-->
-<!--                        <h4>Книга 5</h4>-->
-<!--                        <p>Lorem ipsum dolor sit amet, consectetur.</p>-->
-<!--                    </div>-->
-<!--                    <div class="store__box--price">-->
-<!--                        <h4>850 руб</h4>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </a>-->
-
         </div>
     </section>
 
@@ -262,147 +74,15 @@
         <h1 class="block_title">бесплатные материалы</h1>
         <h2 class="block_descript">(материалы в помощь)</h2>
             <?= do_shortcode('[free_book]');?>
-<!--         <a href="#">-->
-<!--                <div class="store__box">-->
-<!--                    <div class="store__box--stars">-->
-<!--                        <span class="star-gld"></span>-->
-<!--                        <span class="star-wht"></span>-->
-<!--                        <span class="star-wht"></span>-->
-<!--                        <span class="star-wht"></span>-->
-<!--                        <span class="star-wht"></span>                        -->
-<!--                    </div>-->
-<!--                    <img src="--><?php //bloginfo('template_directory'); ?><!--/img/Layer-108.png" alt="">-->
-<!--                    <div class="store__box--text">-->
-<!--                        <h4>Книга 1</h4>-->
-<!--                        <p>Lorem ipsum dolor sit amet, consectetur.</p>-->
-<!--                    </div>-->
-<!--                    <div class="store__box--price">-->
-<!--                        <h4>850 руб</h4>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </a>-->
-<!--            <a href="#">-->
-<!--                <div class="store__box">-->
-<!--                     <div class="store__box--stars">-->
-<!--                        <span class="star-wht"></span>-->
-<!--                        <span class="star-wht"></span>-->
-<!--                        <span class="star-wht"></span>-->
-<!--                        <span class="star-wht"></span>-->
-<!--                        <span class="star-wht"></span>                        -->
-<!--                    </div>-->
-<!--                    <img src="--><?php //bloginfo('template_directory'); ?><!--/img/Layer-109.png" alt="">-->
-<!--                    <div class="store__box--text">-->
-<!--                        <h4>Книга 2</h4>-->
-<!--                        <p>Lorem ipsum dolor sit amet, consectetur.</p>-->
-<!--                    </div>-->
-<!--                    <div class="store__box--price">-->
-<!--                        <h4>850 руб</h4>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </a>-->
-<!--            <a href="#">-->
-<!--                <div class="store__box">-->
-<!--                     <div class="store__box--stars">-->
-<!--                        <span class="star-gld"></span>-->
-<!--                        <span class="star-gld"></span>-->
-<!--                        <span class="star-wht"></span>-->
-<!--                        <span class="star-wht"></span>-->
-<!--                        <span class="star-wht"></span>                        -->
-<!--                    </div>-->
-<!--                    <img src="--><?php //bloginfo('template_directory'); ?><!--/img/Layer-111.png" alt="">-->
-<!--                    <div class="store__box--text">-->
-<!--                        <h4>Книга 3</h4>-->
-<!--                        <p>Lorem ipsum dolor sit amet, consectetur.</p>-->
-<!--                    </div>-->
-<!--                    <div class="store__box--price">-->
-<!--                        <h4>850 руб</h4>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </a>-->
-<!--            <a href="#">-->
-<!--                <div class="store__box">-->
-<!--                     <div class="store__box--stars">-->
-<!--                        <span class="star-gld"></span>-->
-<!--                        <span class="star-gld"></span>-->
-<!--                        <span class="star-gld"></span>-->
-<!--                        <span class="star-wht"></span>-->
-<!--                        <span class="star-wht"></span>                        -->
-<!--                    </div>-->
-<!--                    <img src="--><?php //bloginfo('template_directory'); ?><!--/img/Layer-116.png" alt="">-->
-<!--                    <div class="store__box--text">-->
-<!--                        <h4>Книга 4</h4>-->
-<!--                        <p>Lorem ipsum dolor sit amet, consectetur.</p>-->
-<!--                    </div>-->
-<!--                    <div class="store__box--price">-->
-<!--                        <h4>850 руб</h4>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </a>-->
-<!--            <a href="#">-->
-<!--                <div class="store__box">-->
-<!--                     <div class="store__box--stars">-->
-<!--                        <span class="star-wht"></span>-->
-<!--                        <span class="star-wht"></span>-->
-<!--                        <span class="star-wht"></span>                        -->
-<!--                    </div>-->
-<!--                    <img src="--><?php //bloginfo('template_directory'); ?><!--/img/Layer-117.png" alt="">-->
-<!--                    <div class="store__box--text">-->
-<!--                        <h4>Книга 5</h4>-->
-<!--                        <p>Lorem ipsum dolor sit amet, consectetur.</p>-->
-<!--                    </div>-->
-<!--                    <div class="store__box--price">-->
-<!--                        <h4>850 руб</h4>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </a>-->
+
         </div>
     </section>
 
-  <!--  <section class="reviews">
-        <div class="contain">
-            <div class="reviews__arrow"></div>
-            <h1 class="block_title">ОТЗЫВЫ</h1>
-            <div class="reviews__box">
-                <p>Компания DIRECT OPTIMUM разработала пластиковую карту с Дополненной Реальностью.
-                 В отличие от обычных листовок, которые всем надоели, наши карты с Дополненной Реальностью 
-                 берут с восторгом и просят еще для своих Друзей. Это качественно новый вид рекламы, 
-                 который работает многократно и навсегда запоминается из-за первоначального ВАУ эффекта. 
-                    СПАСИБО DIRECT OPTIMUM!</p>
-                <div class="reviews__box--author">
-                    <div class="reviews__box--author-img">
-                        <img src="<?php /*bloginfo('template_directory'); */?>/img/Layer-27.png" alt="">
-                    </div>
-                    <h4>Крутилин Александр</h4>
-                    <p>Дисконтная система “Друзья”</p>
-                </div>
-            </div>
-            <div class="reviews__box">
-                 <p>Компания DIRECT OPTIMUM разработала пластиковую карту с Дополненной Реальностью.
-                 В отличие от обычных листовок, которые всем надоели, наши карты с Дополненной Реальностью 
-                 берут с восторгом и просят еще для своих Друзей. Это качественно новый вид рекламы, 
-                 который работает многократно и навсегда запоминается из-за первоначального ВАУ эффекта. 
-                    СПАСИБО DIRECT OPTIMUM!</p>
-                <div class="reviews__box--author">
-                    <div class="reviews__box--author-img">
-                        <img src="<?php /*bloginfo('template_directory'); */?>/img/Layer-28.png" alt="">
-                    </div>
-                    <h4>Крутилин Александр</h4>
-                    <p>Дисконтная система “Друзья”</p>
-                </div>
-            </div>
-        </div>
-    </section>-->
     <?php echo do_shortcode("[reviews]");?>
     <section class="contactme"> 
         <a id="go_contacts"></a>                       
             <h1 class="block_title">Свяжитесь со мной</h1>
             <div class="contactme__form">
-                <!-- <form action="#">
-                    <input type="text" class="contactme__form--input" placeholder="Ваше имя">
-                    <input type="text" class="contactme__form--input" placeholder="email">
-                    <textarea class="contactme__form--text" placeholder="Сообщение"></textarea>
-                    <input type="submit" class="contactme__form--sub" value="Отправить"></div>  
-                </form> -->
                 <?php echo do_shortcode("[contact-form-7 id='5' title='form']"); ?>
                 <? do_shortcode("[bbp-forum-index]");?>
             </div>
@@ -428,6 +108,47 @@
     <footer class="footer">
         <h5>© 2015 - Все права защищены</h5>
     </footer>
+    <div class="modal fade" id="buy-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-md" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Товар добавлен в корзину</h4>
+                </div>
+                <div class="modal-body">
+                    <!--<p>Укажите ваше имя:</p>
+                    <input type="text" name="order-name">
+                    <p>Укажите ваш e-mail:</p>
+                    <input type="email" name="order-mail">-->
+                    <div class="row">
+                        <div class="pull-left">
+                            <a class="gonext" href="#" data-dismiss="modal">
+                                <h4> Вернуться на сайт</h4>
+                            </a>
+                        </div>
+                        <div class="pull-right">
+                            <a class="goorder" href="/cart">
+                                <h4>Оформить заказ <span class="glyphicon glyphicon-share-alt"></span></h4>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!--<div class="modal-footer">
+                    <button type="button" class="btn btn-success send-order" data-dismiss="modal">Отправить</button>
+                </div>-->
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        addLoadEvent = function(func){if(typeof jQuery!="undefined")jQuery(document).ready(func);else if(typeof wpOnload!='function'){wpOnload=func;}else{var oldonload=wpOnload;wpOnload=function(){oldonload();func();}}};
+        var ajaxurl = '/wp-admin/admin-ajax.php',
+            pagenow = 'toplevel_page_mainpage',
+            typenow = '',
+            adminpage = 'toplevel_page_mainpage',
+            thousandsSeparator = ' ',
+            decimalPoint = ',',
+            isRtl = 0;
+    </script>
 <?php wp_footer(); ?>
 </body>
 </html>
