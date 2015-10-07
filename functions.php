@@ -894,6 +894,8 @@ function delFromCart(){
 }
 
 function order_page_sc(){
+    global $current_user;
+    get_currentuserinfo();
 
     $items = explode(',',$_COOKIE['cartCookie']);
     //получаем количество одинаковых товаров
@@ -904,8 +906,9 @@ function order_page_sc(){
         $items = array_count_values($items);
     }
    // prn($items);
+    $user = $current_user->user_email;
     $parser = new Parser_write_theme();
-    $parser->render(TM_DIR . '/views/ordergrid.php', ['items' => $items]);
+    $parser->render(TM_DIR . '/views/ordergrid.php', ['items' => $items, 'user' => $user]);
 }
 
 add_shortcode('order_page', 'order_page_sc');
@@ -949,52 +952,63 @@ function set_order(){
     die();
 }
 
+function generateNumber($length = 8){
+    $chars = '0123456789';
+    $numChars = strlen($chars);
+    $string = '';
+    for ($i = 0; $i < $length; $i++) {
+        $string .= substr($chars, rand(1, $numChars) - 1, 1);
+    }
+    return $string;
+}
 
 add_shortcode('demo', 'demo_function');
-
-function demo_function(){
-$mrh_login = "vgoidin";
-$mrh_pass1 = "123edcxzaqws";
-
+add_shortcode('auth_link', 'auth_link_fn');
+function auth_link_fn(){
+    global $current_user;
+    get_currentuserinfo();
 // номер заказа
 // number of order
-$inv_id = 440039971;
+    $inv_id = 440039971;
 
+    if(empty($current_user->user_login)){
+        echo '<br><a href="/reg/">Регистрация</a> / <a href="/auth/">Вход</a>';
+    }
 // описание заказа
 // order description
-$inv_desc = "ROBOKASSA Advanced User Guide";
+    $inv_desc = "ROBOKASSA Advanced User Guide";
 
 // сумма заказа
 // sum of order
-$out_summ = "100.00";
+    $out_summ = "100.00";
 
 // тип товара
 // code of goods
-$shp_item = 1;
+    $shp_item = 1;
 
 // предлагаемая валюта платежа
 // default payment e-currency
-$in_curr = "";
+    $in_curr = "";
 
 // язык
 // language
-$culture = "ru";
+    $culture = "ru";
 
 // кодировка
 // encoding
-$encoding = "utf-8";
+    $encoding = "utf-8";
 
 // формирование подписи
 // generate signature
-echo $crc  = md5("$mrh_login:$out_summ:$inv_id:$mrh_pass1:Shp_item=$shp_item");
+    echo $crc  = md5("$mrh_login:$out_summ:$inv_id:$mrh_pass1:Shp_item=$shp_item");
 
 // HTML-страница с кассой
 // ROBOKASSA HTML-page
-print "<html><script language=JavaScript ".
-    "src='https://auth.robokassa.ru/Merchant/PaymentForm/FormFLS.js?".
-    "MrchLogin=$mrh_login&OutSum=$out_summ&InvId=$inv_id&IncCurrLabel=$in_curr".
-    "&Desc=$inv_desc&SignatureValue=$crc&Shp_item=$shp_item".
-    "&Culture=$culture&Encoding=$encoding'></script></html>";
+    print "<html><script language=JavaScript ".
+        "src='https://auth.robokassa.ru/Merchant/PaymentForm/FormFLS.js?".
+        "MrchLogin=$mrh_login&OutSum=$out_summ&InvId=$inv_id&IncCurrLabel=$in_curr".
+        "&Desc=$inv_desc&SignatureValue=$crc&Shp_item=$shp_item".
+        "&Culture=$culture&Encoding=$encoding'></script></html>";
 
 }
 
