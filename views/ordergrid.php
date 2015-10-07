@@ -96,7 +96,7 @@
                         <br>
                         <div class="input-group input-group">
                             <span class="input-group-addon" id="sizing-addon1">E-mail</span>
-                            <input type="email" name="order-mail" class="form-control" placeholder="Укажите ваш e-mail" aria-describedby="sizing-addon1">
+                            <input type="email" name="order-mail" class="form-control" value="<?=$user?>" aria-describedby="sizing-addon1">
                         </div>
                         <br>
                         <div class="input-group input-group">
@@ -104,10 +104,6 @@
                             <input type="text" name="order-phone" class="form-control" placeholder="Телефон для связи" aria-describedby="sizing-addon1">
                         </div>
                         <br>
-                        <div class="input-group input-group">
-                            <span class="input-group-addon" id="sizing-addon1">Адрес</span>
-                            <input type="text" name="order-address" class="form-control" placeholder="Адрес доставки" aria-describedby="sizing-addon1">
-                        </div>
                     </div>
                 </div>
                 <input type="hidden" name="sum" value="<?=$sum?>">
