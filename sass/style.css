@@ -504,6 +504,8 @@ textarea#bbp_topic_content {
       height: 100%;
       vertical-align: middle; }
     .store__box img {
+      height: 100%;
+      width: 100%;
       vertical-align: middle; }
     .store__box--text {
       position: absolute;
