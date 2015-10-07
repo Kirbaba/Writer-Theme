@@ -97,3 +97,32 @@
     width: 130px;
     height: 200px;
 }
+
+.orderWrap {
+    height: 500px;
+    width: 100%;
+}
+
+.orderPay {
+    width: 60%;
+    height: 120px;
+    margin: 100px auto;
+    border: 1px solid #2B353A;
+    padding: 20px;
+}
+
+.sbmLabel {
+    font-size: 20px;
+    padding-right: 30px;
+}
+
+.orderId {
+    font-size: 20px;
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+}
+
+#sbm {
+    margin-bottom: 7px;
+}

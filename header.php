@@ -20,7 +20,7 @@
     			<li><a href="<?php echo get_permalink(23); ?>">форум</a></li>
     			<li><a href="<?php echo get_home_url();?>#go_contacts">КОНТАКТЫ</a></li>    			
     		</ul>
-    		<a href="#nowhere" class="button-buy"></a>
+    		<a href="/cart/" class="button-buy"></a>
 			<a href="/search/" class="button-search"></a>
     	</nav>
     </header>
