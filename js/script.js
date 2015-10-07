@@ -66,6 +66,16 @@ $(window).scroll(function() {
 
 $(document).ready(function(){
     var id;
+    $.ajax({
+        url: ajaxurl, //url, к которому обращаемся
+        type: "POST",
+        data: "action=get_count", //данные, которые передаем. Обязательно для action указываем имя нашего хука
+        success: function(data){
+            /*console.log(data);*/
+            $('.button-buy').append(' ('+data+') ');
+        }
+    });
+
 
     $('.search_btn').on('click', function(){
         var s = $('.search_input').val();

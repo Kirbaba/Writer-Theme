@@ -558,6 +558,8 @@ add_action('wp_ajax_nopriv_del_from_cart', 'delFromCart');
 add_action('wp_ajax_del_from_cart', 'delFromCart');
 add_action('wp_ajax_nopriv_order', 'set_order');
 add_action('wp_ajax_order', 'set_order');
+add_action('wp_ajax_nopriv_get_count', 'getCartCount');
+add_action('wp_ajax_get_count', 'getCartCount');
 
 /*------------------------СТРАНИЦА Книги------------------------------*/
 add_action('init', 'my_custom_init_store');
@@ -892,11 +894,8 @@ function delFromCart(){
 }
 
 function order_page_sc(){
-    global $current_user;
-    get_currentuserinfo();
 
     $items = explode(',',$_COOKIE['cartCookie']);
-
     //получаем количество одинаковых товаров
 
     if(empty($items[0])){
@@ -905,9 +904,8 @@ function order_page_sc(){
         $items = array_count_values($items);
     }
    // prn($items);
-    $user = $current_user->user_email;
     $parser = new Parser_write_theme();
-    $parser->render(TM_DIR . '/views/ordergrid.php', ['items' => $items, 'user' => $user]);
+    $parser->render(TM_DIR . '/views/ordergrid.php', ['items' => $items]);
 }
 
 add_shortcode('order_page', 'order_page_sc');
@@ -952,23 +950,57 @@ function set_order(){
 }
 
 
-function generateNumber($length = 8){
-    $chars = '0123456789';
-    $numChars = strlen($chars);
-    $string = '';
-    for ($i = 0; $i < $length; $i++) {
-        $string .= substr($chars, rand(1, $numChars) - 1, 1);
-    }
-    return $string;
+add_shortcode('demo', 'demo_function');
+
+function demo_function(){
+$mrh_login = "vgoidin";
+$mrh_pass1 = "123edcxzaqws";
+
+// номер заказа
+// number of order
+$inv_id = 440039971;
+
+// описание заказа
+// order description
+$inv_desc = "ROBOKASSA Advanced User Guide";
+
+// сумма заказа
+// sum of order
+$out_summ = "100.00";
+
+// тип товара
+// code of goods
+$shp_item = 1;
+
+// предлагаемая валюта платежа
+// default payment e-currency
+$in_curr = "";
+
+// язык
+// language
+$culture = "ru";
+
+// кодировка
+// encoding
+$encoding = "utf-8";
+
+// формирование подписи
+// generate signature
+echo $crc  = md5("$mrh_login:$out_summ:$inv_id:$mrh_pass1:Shp_item=$shp_item");
+
+// HTML-страница с кассой
+// ROBOKASSA HTML-page
+print "<html><script language=JavaScript ".
+    "src='https://auth.robokassa.ru/Merchant/PaymentForm/FormFLS.js?".
+    "MrchLogin=$mrh_login&OutSum=$out_summ&InvId=$inv_id&IncCurrLabel=$in_curr".
+    "&Desc=$inv_desc&SignatureValue=$crc&Shp_item=$shp_item".
+    "&Culture=$culture&Encoding=$encoding'></script></html>";
+
 }
 
-add_shortcode('auth_link', 'auth_link_fn');
-
-function auth_link_fn(){
-    global $current_user;
-    get_currentuserinfo();
-
-    if(empty($current_user->user_login)){
-        echo '<br><a href="/reg/">Регистрация</a> / <a href="/auth/">Вход</a>';
-    }
+function getCartCount(){
+    $items = explode(',',$_COOKIE['cartCookie']);
+    echo count($items);
+    die();
 }
+
