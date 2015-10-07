@@ -80,6 +80,22 @@ $(document).ready(function(){
         });
     });
 
+    $(document).keypress(function(e) {
+        if(e.which == 13) {
+            var s = $('.search_input').val();
+            $.ajax({
+                url: ajaxurl, //url, к которому обращаемся
+                type: "POST",
+                data: "action=get_search&s=" +s, //данные, которые передаем. Обязательно для action указываем имя нашего хука
+                success: function(data){
+                    /*console.log(data);*/
+                    $('.searchResultBox').html(data);
+                }
+            });
+        }
+
+    });
+
     $(document).on('click', '.buy-but', function(){
         id = $(this).attr('data-item');
         console.log(id);

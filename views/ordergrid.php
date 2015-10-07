@@ -60,9 +60,39 @@
                             foreach($items as $key => $value){
                                 $sum = $sum + $value*get_post_meta($key, 'price', 1);
                             }
+                            $mrh_login = "vgoidin";
+                            $mrh_pass1 = "123edcxzaqws";
+
+                            $inv_id = 0;
+
+                            $inv_desc = "Оплата с сайта http://vgoidin.ru ";
+
+                            $out_summ = $sum;
+
+                            $shp_item = 1;
+
+                            $in_curr = "";
+
+                            $culture = "ru";
+
+                            $encoding = "utf-8";
+
+                            $crc  = md5("$mrh_login:$out_summ:$inv_id:$mrh_pass1:Shp_item=$shp_item");
                             echo $sum;
                             ?> р.</p>
-                        <p><button class="btn btn-primary" data-toggle="modal" data-target="#send-modal">Оформить заказ</button></p>
+                        <p><button class="btn btn-primary" data-toggle="modal" data-target="#send-modal">Оформить заказ</button>
+                            <!--<form action='https://merchant.roboxchange.com/Index.aspx' method=POST>
+                                <input type=hidden name=MrchLogin value='<?/*=$mrh_login*/?>'>
+                                <input type=hidden name=OutSum value='<?/*=$out_summ*/?>'>
+                                <input type=hidden name=InvId value='<?/*=$inv_id*/?>'>
+                                <input type=hidden name=Desc value='<?/*=$inv_desc*/?>'>
+                                <input type=hidden name=SignatureValue value='<?/*=$crc*/?>'>
+                                <input type=hidden name=Shp_item value='<?/*=$shp_item*/?>'>
+                                <input type=hidden name=IncCurrLabel value='<?/*=$in_curr*/?>'>
+                                <input type=hidden name=Culture value='<?/*=$culture*/?>'>
+                                <input type=submit class="btn btn-primary" value='Оформить заказ'>
+                            </form>-->
+                        </p>
                     </div>
                     <div class="col-lg-2 pull-left">
                         <br>

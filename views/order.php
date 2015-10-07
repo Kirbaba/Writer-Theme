@@ -76,32 +76,34 @@ Template Name: Order
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title" id="myModalLabel">Оформление заказа</h4>
             </div>
-            <div class="modal-body">
-                <div class="row">
-                   <div class="input-group input-group">
-                        <span class="input-group-addon" id="sizing-addon1">Имя</span>
-                        <input type="text" name="order-name" class="form-control" placeholder="Укажите ваше имя" aria-describedby="sizing-addon1">
-                    </div>
-                    <br>
-                    <div class="input-group input-group">
-                        <span class="input-group-addon" id="sizing-addon1">E-mail</span>
-                        <input type="email" name="order-mail" class="form-control" placeholder="Укажите ваш e-mail" aria-describedby="sizing-addon1">
-                    </div>
-                    <br>
-                    <div class="input-group input-group">
-                        <span class="input-group-addon" id="sizing-addon1">Телефон</span>
-                        <input type="text" name="order-phone" class="form-control" placeholder="Телефон для связи" aria-describedby="sizing-addon1">
-                    </div>
-                    <br>
-                    <div class="input-group input-group">
-                        <span class="input-group-addon" id="sizing-addon1">Адрес</span>
-                        <input type="text" name="order-address" class="form-control" placeholder="Адрес доставки" aria-describedby="sizing-addon1">
+            <form action="/demo/" method="post">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="input-group input-group">
+                            <span class="input-group-addon" id="sizing-addon1">Имя</span>
+                            <input type="text" name="order-name" class="form-control" placeholder="Укажите ваше имя" aria-describedby="sizing-addon1">
+                        </div>
+                        <br>
+                        <div class="input-group input-group">
+                            <span class="input-group-addon" id="sizing-addon1">E-mail</span>
+                            <input type="email" name="order-mail" class="form-control" placeholder="Укажите ваш e-mail" aria-describedby="sizing-addon1">
+                        </div>
+                        <br>
+                        <div class="input-group input-group">
+                            <span class="input-group-addon" id="sizing-addon1">Телефон</span>
+                            <input type="text" name="order-phone" class="form-control" placeholder="Телефон для связи" aria-describedby="sizing-addon1">
+                        </div>
+                        <br>
+                        <div class="input-group input-group">
+                            <span class="input-group-addon" id="sizing-addon1">Адрес</span>
+                            <input type="text" name="order-address" class="form-control" placeholder="Адрес доставки" aria-describedby="sizing-addon1">
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-success send-order" data-dismiss="modal">Отправить</button>
-            </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-success">Отправить</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>
