@@ -92,12 +92,19 @@
         <div class="contain">
             <div class="contactinfo__block">
                 <h3>контакты</h3>
-                <a href="<?php echo get_theme_mod('tw_textbox'); ?>" class="tw"></a>
-                <a href="<?php echo get_theme_mod('fb_textbox'); ?>" class="fb"></a>
-                <a href="<?php echo get_theme_mod('p_textbox'); ?>" class="pn"></a>
-                <a href="<?php echo get_theme_mod('gpl_textbox'); ?>" class="gp"></a>
-                <p class="phone_number"><?php echo get_theme_mod('phone_textbox'); ?></p>
-                <p class="email_adress"><?php echo get_theme_mod('email_textbox'); ?></p>
+                <div class="row">
+                    <?php if( get_theme_mod('tw_textbox') != ''){ ?><a href="<?php echo get_theme_mod('tw_textbox'); ?>" class="tw"></a><?php } ?>
+                    <?php if( get_theme_mod('fb_textbox') != ''){ ?><a href="<?php echo get_theme_mod('fb_textbox'); ?>" class="fb"></a><?php } ?>
+                    <?php if( get_theme_mod('p_textbox') != ''){ ?><a href="<?php echo get_theme_mod('p_textbox'); ?>" class="pn"></a><?php } ?>
+                    <?php if( get_theme_mod('gpl_textbox') != ''){ ?><a href="<?php echo get_theme_mod('gpl_textbox'); ?>" class="gp"></a><?php } ?>
+                    <?php if( get_theme_mod('vk_textbox') != ''){ ?><a href="<?php echo get_theme_mod('vk_textbox'); ?>"><i class="fa fa-vk"></i></a><?php } ?>
+                </div>
+
+                <div class="row">
+                    <p class="phone_number"><?php echo get_theme_mod('phone_textbox'); ?></p>
+                    <p class="email_adress"><?php echo get_theme_mod('email_textbox'); ?></p>
+                </div>
+
             </div>
         </div>
     </section>

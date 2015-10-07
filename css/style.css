@@ -97,3 +97,16 @@
     width: 130px;
     height: 200px;
 }
+
+.contactinfo__block a{
+    float: left;
+    line-height: 45px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 50%;
+    color: #2B353A;
+}
+
+.contactinfo__block a i{
+    font-size: 20px;
+}

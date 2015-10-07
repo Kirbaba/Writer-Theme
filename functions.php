@@ -14,6 +14,7 @@ function add_style_wt(){
     wp_enqueue_style( 'my-styles', get_template_directory_uri() . '/css/style.css', array(), '1');
     wp_enqueue_style( 'my-sass', get_template_directory_uri() . '/sass/style.css', array('my-styles'), '1');
     wp_enqueue_style( 'fotorama', get_template_directory_uri() . '/css/fotorama.css', array('my-styles'), '1');
+    wp_enqueue_style( 'fa', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css', array('my-styles'), '1');
 }
 
 function add_script_wt(){

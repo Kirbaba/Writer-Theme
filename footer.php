@@ -6,6 +6,8 @@
                 <a href="<?php echo get_theme_mod('fb_textbox'); ?>" class="fb"></a>
                 <a href="<?php echo get_theme_mod('p_textbox'); ?>" class="pn"></a>
                 <a href="<?php echo get_theme_mod('gpl_textbox'); ?>" class="gp"></a>
+                <a href="<?php echo get_theme_mod('gpl_textbox'); ?>"><i class="fa fa-vk"></i></a>
+
                 <p class="phone_number"><?php echo get_theme_mod('phone_textbox'); ?></p>
                 <p class="email_adress"><?php echo get_theme_mod('email_textbox'); ?></p>
             </div>
