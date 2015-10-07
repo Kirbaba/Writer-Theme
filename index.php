@@ -93,11 +93,17 @@
             <div class="contactinfo__block">
                 <h3>контакты</h3>
                 <div class="row">
-                    <?php if( get_theme_mod('tw_textbox') != ''){ ?><a href="<?php echo get_theme_mod('tw_textbox'); ?>" class="tw"></a><?php } ?>
-                    <?php if( get_theme_mod('fb_textbox') != ''){ ?><a href="<?php echo get_theme_mod('fb_textbox'); ?>" class="fb"></a><?php } ?>
-                    <?php if( get_theme_mod('p_textbox') != ''){ ?><a href="<?php echo get_theme_mod('p_textbox'); ?>" class="pn"></a><?php } ?>
-                    <?php if( get_theme_mod('gpl_textbox') != ''){ ?><a href="<?php echo get_theme_mod('gpl_textbox'); ?>" class="gp"></a><?php } ?>
-                    <?php if( get_theme_mod('vk_textbox') != ''){ ?><a href="<?php echo get_theme_mod('vk_textbox'); ?>"><i class="fa fa-vk"></i></a><?php } ?>
+                    <?php if( get_theme_mod('tw_textbox') != ''){ ?><a href="<?php echo get_theme_mod('tw_textbox'); ?>" ><i class="fa fa-twitter"></i></a><?php } ?>
+                    <?php if( get_theme_mod('fb_textbox') != ''){ ?><a href="<?php echo get_theme_mod('fb_textbox'); ?>" ><i class="fa fa-facebook"></i></a><?php } ?>
+                    <?php if( get_theme_mod('p_textbox') != ''){ ?><a href="<?php echo get_theme_mod('p_textbox'); ?>" ><i class="fa fa-pinterest"></i></a><?php } ?>
+                    <?php if( get_theme_mod('gpl_textbox') != ''){ ?><a href="<?php echo get_theme_mod('gpl_textbox'); ?>" ><i class="fa fa-google-plus"></i></a><?php } ?>
+                    <?php if( get_theme_mod('vk_textbox') != ''){ ?><a href="<?php echo get_theme_mod('vk_textbox'); ?>" ><i class="fa fa-vk"></i></a><?php } ?>
+                    <?php if( get_theme_mod('in_textbox') != ''){ ?><a href="<?php echo get_theme_mod('in_textbox'); ?>" ><i class="fa fa-instagram"></i></a><?php } ?>
+                    <?php if( get_theme_mod('ok_textbox') != ''){ ?><a href="<?php echo get_theme_mod('ok_textbox'); ?>" ><i class="fa fa-odnoklassniki"></i></a><?php } ?>
+                    <?php if( get_theme_mod('yt_textbox') != ''){ ?><a href="<?php echo get_theme_mod('yt_textbox'); ?>" ><i class="fa fa-youtube"></i></a><?php } ?>
+                    <?php if( get_theme_mod('vim_textbox') != ''){ ?><a href="<?php echo get_theme_mod('vim_textbox'); ?>" ><i class="fa fa-vimeo"></i></a><?php } ?>
+                    <?php if( get_theme_mod('tm_textbox') != ''){ ?><a href="<?php echo get_theme_mod('tm_textbox'); ?>" ><i class="fa fa-tumblr"></i></a><?php } ?>
+                    <?php if( get_theme_mod('sk_textbox') != ''){ ?><a href="<?php echo get_theme_mod('sk_textbox'); ?>" ><i class="fa fa-skype"></i></a><?php } ?>
                 </div>
 
                 <div class="row">
