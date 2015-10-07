@@ -558,6 +558,8 @@ add_action('wp_ajax_nopriv_del_from_cart', 'delFromCart');
 add_action('wp_ajax_del_from_cart', 'delFromCart');
 add_action('wp_ajax_nopriv_order', 'set_order');
 add_action('wp_ajax_order', 'set_order');
+add_action('wp_ajax_nopriv_get_count', 'getCartCount');
+add_action('wp_ajax_get_count', 'getCartCount');
 
 /*------------------------СТРАНИЦА Книги------------------------------*/
 add_action('init', 'my_custom_init_store');
@@ -985,4 +987,11 @@ function to_scroll_fn(){
     else {
         echo '<div id="auth-user" data-value="1"></div>';
     }
+}
+
+function getCartCount()
+{
+    $items = explode(',', $_COOKIE['cartCookie']);
+    echo count($items);
+    die();
 }

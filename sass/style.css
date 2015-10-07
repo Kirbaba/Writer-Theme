@@ -124,14 +124,7 @@ b {
 #bbpress-forums {
   font-family: Arial; }
 
-.button-buy {
-  display: inline-block;
-  background-image: url("../img/marker20.png");
-  width: 25px;
-  height: 23px;
-  margin: 0 25px; }
-  .button-buy:hover {
-    background-image: url("../img/marker20-1.png"); }
+
 
 .button-search {
   display: inline-block;
@@ -143,12 +136,15 @@ b {
 
 .button-buy {
   display: inline-block;
-  background-image: url("../img/marker20.png");
-  width: 25px;
+  color: white;
+  font-size: 25px;
+  width: 65px;
   height: 23px;
-  margin: 0 25px; }
-  .button-buy:hover {
-    background-image: url("../img/marker20-1.png"); }
+  margin: 0 25px;
+  text-decoration: none;}
+.button-buy:hover{
+  color: #38BBDD;
+}
 
 .button-search {
   display: inline-block;

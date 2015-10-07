@@ -147,6 +147,16 @@ $(document).ready(function(){
         });
 
     });
+
+    $.ajax({
+        url: ajaxurl, //url, к которому обращаемся
+        type: "POST",
+        data: "action=get_count", //данные, которые передаем. Обязательно для action указываем имя нашего хука
+        success: function(data){
+            /*console.log(data);*/
+            $('.button-buy').append(' ('+data+') ');
+        }
+    });
 });
 
 
