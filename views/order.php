@@ -92,6 +92,7 @@ Template Name: Order
         isRtl = 0;
 </script>
 <?php wp_footer(); ?>
+<?= do_shortcode('[to_scroll]'); ?>
 </body>
 </html>
 

@@ -36,5 +36,6 @@
                 decimalPoint = ',',
                 isRtl = 0;
         </script>
+        <?= do_shortcode('[to_scroll]'); ?>
 </body>
 </html>

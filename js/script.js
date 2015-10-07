@@ -55,27 +55,21 @@ $(function() {
 });
 
 $(window).scroll(function() {
+    var authUser = $('#auth-user').attr('data-value');
     if ($(".header").offset().top > 50) {
         $(".header").addClass("header--onScroll"); 
-        $(".header--onScroll").removeClass(".header");       
+        $(".header--onScroll").removeClass(".header");
+        if(authUser == '1'){
+            $(".header--onScroll").css({'top':'30px'});
+        }
     } else {
         $(".header--onScroll").addClass("header"); 
-        $(".header").removeClass("header--onScroll");        
+        $(".header").removeClass("header--onScroll");
     }
 });
 
 $(document).ready(function(){
     var id;
-    $.ajax({
-        url: ajaxurl, //url, к которому обращаемся
-        type: "POST",
-        data: "action=get_count", //данные, которые передаем. Обязательно для action указываем имя нашего хука
-        success: function(data){
-            /*console.log(data);*/
-            $('.button-buy').append(' ('+data+') ');
-        }
-    });
-
 
     $('.search_btn').on('click', function(){
         var s = $('.search_input').val();

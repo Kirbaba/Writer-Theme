@@ -20,9 +20,7 @@
     			<li><a href="<?php echo get_permalink(23); ?>">форум</a></li>
     			<li><a href="#go_contacts" class="smoothScroll">КОНТАКТЫ</a></li>    			
     		</ul>
-    		<a href="/cart" class="button-buy">
-                <img src="<?php bloginfo('template_directory'); ?>/img/marker20.png" alt="">
-            </a>
+    		<a href="/cart" class="button-buy"></a>
 			<a href="/search/" class="button-search"></a>
     	</nav>
     </header>
@@ -162,5 +160,6 @@
             isRtl = 0;
     </script>
 <?php wp_footer(); ?>
+<?= do_shortcode('[to_scroll]'); ?>
 </body>
 </html>

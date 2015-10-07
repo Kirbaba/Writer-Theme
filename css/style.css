@@ -139,3 +139,7 @@
 .contactinfo__block a i{
     font-size: 20px;
 }
+
+#subscription-toggle {
+    margin-left: 10px;
+}
