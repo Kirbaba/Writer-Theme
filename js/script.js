@@ -79,7 +79,7 @@ $(document).ready(function(){
             type: "POST",
             data: "action=get_search&s=" +s, //данные, которые передаем. Обязательно для action указываем имя нашего хука
             success: function(data){
-                /*console.log(data);*/
+                console.log(data);
                 $('.searchResultBox').html(data);
             }
         });
@@ -154,8 +154,11 @@ $(document).ready(function(){
         type: "POST",
         data: "action=get_count", //данные, которые передаем. Обязательно для action указываем имя нашего хука
         success: function(data){
-            /*console.log(data);*/
-            $('.button-buy').append(' ('+data+') ');
+            console.log(data);
+            if(data != ''){
+                $('.button-buy').append(' ('+data+') ');
+            }
+
         }
     });
 });
