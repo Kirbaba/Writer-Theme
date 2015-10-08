@@ -59,6 +59,7 @@ $(window).scroll(function() {
     if ($(".header").offset().top > 50) {
         $(".header").addClass("header--onScroll"); 
         $(".header--onScroll").removeClass(".header");
+        $(".header--onScroll").removeClass(".header--page");
         if(authUser == '1'){
             $(".header--onScroll").css({'top':'30px'});
         }

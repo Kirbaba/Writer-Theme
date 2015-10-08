@@ -10,7 +10,7 @@
     <?php wp_head(); ?>
 </head>
 <body>
-    <header class="header--page">
+    <header class="header header--page">
     	<nav class="navigation">
     		<ul>
     			<li><a href="<?php echo get_home_url();?>#go_about">обо мне</a></li>

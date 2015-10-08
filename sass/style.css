@@ -512,6 +512,8 @@ textarea#bbp_topic_content {
       display: block;
       top: 150px;
       z-index: 9;
+      opacity: 0.5;
+      background-color: black;
       padding: 0 10px; }
       .store__box--text h4 {
         color: #FFF;

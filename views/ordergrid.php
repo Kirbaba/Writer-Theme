@@ -60,7 +60,7 @@
                             foreach($items as $key => $value){
                                 $sum = $sum + $value*get_post_meta($key, 'price', 1);
                             }
-                            ?> р.</p>
+                            echo $sum;?> р.</p>
                         <p><button class="btn btn-primary" data-toggle="modal" data-target="#send-modal">Оформить заказ</button></p>
                     </div>
                     <div class="col-lg-2 pull-left">

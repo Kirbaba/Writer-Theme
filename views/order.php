@@ -3,7 +3,7 @@
 Template Name: Order
 */
 ?>
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html>
 <head lang="en">
     <meta charset="UTF-8">
@@ -13,35 +13,35 @@ Template Name: Order
     <link rel="shortcut icon" href="/wp-content/uploads/2015/03/657068.ico" type="image/x-icon" />
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAaOWKyamSxMTXclSDFmJ2N4Am20PCTD6I&sensor=FALSE">
     </script>
-    <title><?php bloginfo('name'); ?> <?php wp_title(); ?></title>
-    <?php wp_head(); ?>
+    <title><?php /*bloginfo('name'); */?> <?php /*wp_title(); */?></title>
+    <?php /*wp_head(); */?>
 </head>
 <body>
 <header class="header">
     <nav class="navigation">
         <ul>
             <li><a href="/" >Главная</a></li>
-            <li><a href="<?php echo get_permalink(23); ?>">форум</a></li>
+            <li><a href="<?php /*echo get_permalink(23); */?>">форум</a></li>
         </ul>
         <a href="/cart" class="button-buy">
-            <img src="<?php bloginfo('template_directory'); ?>/img/marker20.png" alt="">
+            <img src="<?php /*bloginfo('template_directory'); */?>/img/marker20.png" alt="">
         </a>
         <a href="/search/" class="button-search"></a>
     </nav>
-</header>
-
-<section class="entry">
+</header>-->
+<? get_header();?>
+<!--<section class="entry">
     <div class="entry__text">
         <h1>Владимир Гойдин</h1>
         <h3>Земля, недвижимость, правовое сопровождение</h3>
         <p>
             <?php
-            $text = get_post( 78 );
+/*            $text = get_post( 78 );
             echo $text->post_content;
-            ?>
+            */?>
         </p>
     </div>
-</section>
+</section>-->
 
 <section class="store">
     <a id="go_store"></a>

@@ -26,6 +26,15 @@ function add_script_wt(){
 
 }
 
+function add_admin_script(){
+    //wp_enqueue_script('admin',get_template_directory_uri() . '/js/admin.js', array(), '1');
+    wp_enqueue_style( 'my-bootstrap-extension-admin', get_template_directory_uri() . '/css/bootstrap.css', array(), '1');
+    //wp_enqueue_style( 'my-style-admin', get_template_directory_uri() . '/css/admin.css', array(), '1');
+
+}
+
+add_action('admin_enqueue_scripts', 'add_admin_script');
+
 add_action( 'wp_enqueue_scripts', 'add_style_wt' );
 add_action( 'wp_enqueue_scripts', 'add_script_wt' );
 
@@ -995,3 +1004,26 @@ function getCartCount()
     echo count($items);
     die();
 }
+
+/*------------------------Заказы------------------------------*/
+
+function register_orders_page(){
+    add_menu_page(
+        'Заказы', 'Заказы', 'manage_options', 'orders', 'admin_orders_page', '', 200
+    );
+}
+
+function admin_orders_page(){
+    global $wpdb;
+    $parser = new Parser_write_theme();
+
+    if(isset($_GET['del'])){
+        $wpdb->delete( 'orders', ['id'=>$_GET['del']] );
+    }
+
+    $orders = $wpdb->get_results("SELECT * FROM orders", ARRAY_A);
+
+    $parser->render(TM_DIR . '/view/orders_admin_page.php', ['orders' => $orders]);
+}
+
+add_action( 'admin_menu', 'register_orders_page' );
