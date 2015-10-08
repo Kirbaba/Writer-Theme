@@ -492,7 +492,7 @@ textarea#bbp_topic_content {
     position: relative;
     width: 18%;
     margin: 0 1%;
-    height: 380px;
+    height: 400px;
     overflow: hidden;
     text-align: center;
     word-spacing: nowrap;
@@ -510,7 +510,7 @@ textarea#bbp_topic_content {
     .store__box--text {
       position: absolute;
       display: block;
-      top: 150px;
+      top: 95px;
       z-index: 9;
       opacity: 0.5;
       background-color: black;
@@ -527,9 +527,10 @@ textarea#bbp_topic_content {
         font-size: 16px;
         text-align: left; }
     .store__box--price {
+      z-index: 9;
       display: block;
       position: absolute;
-      bottom: 0;
+      bottom: 20px;
       width: 100%;
       background: rgba(0, 0, 0, 0.4);
       height: 64px;
@@ -571,7 +572,28 @@ textarea#bbp_topic_content {
         background: url("../img/Layer-4.png") -8px -9px; }
   .store a:hover .store__box--price, .materials a:hover .store__box--price, .store a:hover .store__box--stars, .materials a:hover .store__box--stars {
     opacity: 1; }
-
+.store__box--block{
+  text-align: center;
+  height: 380px;
+  top: 0;
+}
+.store__box--more{
+  position: absolute;
+}
+.single__buttons{
+  text-align: center;
+}
+.store-single{
+  padding: 30px;
+}
+.store-single-text{
+  margin: 20px 0;
+}
+.single__buttons a{
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 0 10px;
+}
 .materials {
   padding-top: 0; }
   .materials h2 {
