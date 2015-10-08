@@ -1001,9 +1001,10 @@ function to_scroll_fn(){
 function getCartCount()
 {
     $items = explode(',', $_COOKIE['cartCookie']);
-    if(isset($items[0])){
-
+    if(empty($items[0])){
+       // prn($items);
     }else{
+       // prn($items);
         echo count($items);
     }
     die();
