@@ -115,6 +115,26 @@ $(document).ready(function(){
         return false;
     });
 
+    $(document).on('click', '.buy-free-but', function(){
+        id = $(this).attr('data-item');
+        return false;
+    });
+
+    $(document).on('click', '.send-free-order', function(){
+        var name = $('input[name="order-name"]').val();
+        var mail = $('input[name="order-mail"]').val();
+
+        $.ajax({
+            url: ajaxurl, //url, к которому обращаемся
+            type: "POST",
+            data: "action=freeorder&name="+name+"&mail="+mail+"&id="+id, //данные, которые передаем. Обязательно для action указываем имя нашего хука
+            success: function(data){
+                //console.log(data);
+                $('#ok-modal').modal('show');
+            }
+        });
+    });
+
     $(document).on('click', '.send-order', function(){
         var name = $('input[name="order-name"]').val();
         var mail = $('input[name="order-mail"]').val();

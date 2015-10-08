@@ -567,8 +567,39 @@ add_action('wp_ajax_nopriv_del_from_cart', 'delFromCart');
 add_action('wp_ajax_del_from_cart', 'delFromCart');
 add_action('wp_ajax_nopriv_order', 'set_order');
 add_action('wp_ajax_order', 'set_order');
+add_action('wp_ajax_nopriv_freeorder', 'set_free_order');
+add_action('wp_ajax_freeorder', 'set_free_order');
 add_action('wp_ajax_nopriv_get_count', 'getCartCount');
 add_action('wp_ajax_get_count', 'getCartCount');
+
+
+function set_free_order(){
+
+    $name = $_POST['name'];
+    $mail = $_POST['mail'];
+    $id   = $_POST['id'];
+
+    $admin_email = get_option('admin_email');
+
+    $str = "С вашего сайта заказали товар:<br>";
+
+    $str .= 'ID товара: '.$id.'<br>';
+    $str .= 'Название: '.get_the_title($id).' <br>';
+    $str .= 'Цена: Бесплатно <br><br>';
+
+
+    $str .= 'Итого: 0 р. <br><br>';
+    $str .= 'Имя заказчика: '.$name.' <br>';
+    $str .= 'Email : '.$mail.' <br>';
+
+    mail($admin_email, "Заказ товара с вашего сайта",
+        $str,
+        "Content-type: text/html; charset=UTF-8\r\n");
+
+    setcookie("cartCookie", "", time()+86400,'/');
+    die();
+}
+
 
 /*------------------------СТРАНИЦА Книги------------------------------*/
 add_action('init', 'my_custom_init_store');
