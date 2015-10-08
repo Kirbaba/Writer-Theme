@@ -494,7 +494,6 @@ textarea#bbp_topic_content {
     margin: 0 1%;
     height: 400px;
     overflow: hidden;
-    text-align: center;
     word-spacing: nowrap;
     vertical-align: middle;
     z-index: 0; }
@@ -578,6 +577,8 @@ textarea#bbp_topic_content {
   top: 0;
 }
 .store__box--more{
+  text-align: center;
+  width: 100%;
   position: absolute;
 }
 .single__buttons{
