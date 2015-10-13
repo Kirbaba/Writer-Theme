@@ -12,8 +12,8 @@
 <body>
     <header class="header">
     	<nav class="navigation">
-    		<ul>               
-    			<li><a href="#go_about" class="smoothScroll">обо мне</a></li>
+    		<ul>
+                <li><a href="#go_about" class="smoothScroll">обо мне</a></li>
     			<li><a href="#go_serv" class="smoothScroll">услуги</a></li>
     			<li><a href="#go_store" class="smoothScroll">Магазин</a></li>
     			<li><a href="#go_materials" class="smoothScroll">бесплатные материалы</a></li>
@@ -129,23 +129,23 @@
                     <h4 class="modal-title" id="myModalLabel">Оформление заказа</h4>
                 </div>
 
-                    <div class="modal-body">
-                        <div class="row">
-                            <div class="input-group input-group">
-                                <span class="input-group-addon" id="sizing-addon1">Имя</span>
-                                <input type="text" name="order-name" class="form-control" placeholder="Укажите ваше имя" aria-describedby="sizing-addon1">
-                            </div>
-                            <br>
-                            <div class="input-group input-group">
-                                <span class="input-group-addon" id="sizing-addon1">E-mail</span>
-                                <input type="email" name="order-mail" class="form-control" placeholder="Укажите ваш e-mail" aria-describedby="sizing-addon1">
-                            </div>
-                            <br>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="input-group input-group">
+                            <span class="input-group-addon" id="sizing-addon1">Имя</span>
+                            <input type="text" name="order-name" class="form-control" placeholder="Укажите ваше имя" aria-describedby="sizing-addon1">
                         </div>
+                        <br>
+                        <div class="input-group input-group">
+                            <span class="input-group-addon" id="sizing-addon1">E-mail</span>
+                            <input type="email" name="order-mail" class="form-control" placeholder="Укажите ваш e-mail" aria-describedby="sizing-addon1">
+                        </div>
+                        <br>
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" data-dismiss="modal" class="btn btn-success send-free-order">Отправить</button>
-                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" data-dismiss="modal" class="btn btn-success send-free-order">Отправить</button>
+                </div>
 
             </div>
         </div>

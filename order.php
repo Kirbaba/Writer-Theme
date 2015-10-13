@@ -80,4 +80,8 @@ $wpdb->insert( 'orders', [
     'email'=>$_POST['order-mail'],
     'phone'=>$_POST['order-phone']
 ] );
+
+$admin_email = get_option('admin_email');
+$text = "Поступил новый заказ, номер заказа: ".$inv_id;
+mail($admin_email, "Заказ товара с вашего сайта",$text,"Content-type: text/html; charset=UTF-8\r\n");
 get_footer();

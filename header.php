@@ -13,6 +13,7 @@
     <header class="header header--page">
     	<nav class="navigation">
     		<ul>
+                <li><a href="<?php echo get_home_url();?>">На главную</a></li>
     			<li><a href="<?php echo get_home_url();?>#go_about">обо мне</a></li>
     			<li><a href="<?php echo get_home_url();?>#go_serv">услуги</a></li>
     			<li><a href="<?php echo get_home_url();?>#go_store">Магазин</a></li>

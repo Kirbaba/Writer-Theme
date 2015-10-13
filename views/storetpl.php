@@ -6,14 +6,14 @@ while ($my_query->have_posts()) : $my_query->the_post(); ?>
        <?php echo get_the_post_thumbnail($my_query->post->ID,'full') ?>
         <div class="store__box--text">
             <h4><?php echo get_the_title() ?></h4>
-            <p><?php echo get_the_content()?></p>
+<!--            <p>--><?php //echo get_the_content()?><!--</p>-->
         </div>
         <div class="store__box--price">
             <h4><?php echo get_post_meta($my_query->post->ID, 'price', 1)?> руб</h4>
         </div>
     </div>
 </a>
-    <a class="store__box--more btn btn-primary" href="<?php the_permalink(); ?>">Подробнее</a></div>
+    <a class="store__box--more" href="<?php the_permalink(); ?>">Подробнее</a></div>
     <?
 endwhile;
 }

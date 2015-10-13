@@ -6,7 +6,7 @@ while ($my_query->have_posts()) : $my_query->the_post(); ?>
                 <?php echo get_the_post_thumbnail($my_query->post->ID,'full') ?>
                 <div class="store__box--text">
                     <h4><?php echo get_the_title() ?></h4>
-                    <p><?php echo get_the_content()?></p>
+<!--                    <p>--><?php //echo get_the_content()?><!--</p>-->
                 </div>
                 <div class="store__box--price">
                     <h4>Бесплатно</h4>
