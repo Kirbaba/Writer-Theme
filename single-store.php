@@ -16,10 +16,11 @@
             <div class="single__buttons">
                 <?php if('freestore' == get_post_type()){ ?>
                     <a href="#" data-toggle="modal" data-target="#send-modal" class="btn btn-danger buy-free-but" data-item="<?php echo get_the_ID() ?>">Заказать</a>
+                    <a href="/#go_materials" class="btn btn-primary">Назад</a>
                 <?php } else {?>
                     <a href="#" data-toggle="modal" data-target="#buy-modal" class="btn btn-danger buy-but" data-item="<?php echo get_the_ID() ?>">Купить</a>
+                    <a href="/#go_store" class="btn btn-primary">Назад</a>
                 <?php } ?>
-                <a href="/" class="btn btn-primary">Назад</a>
             </div>
         <?php endwhile; ?>
         <?php  endif;?>

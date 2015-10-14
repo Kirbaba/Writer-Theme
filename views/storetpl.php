@@ -13,7 +13,7 @@ while ($my_query->have_posts()) : $my_query->the_post(); ?>
         </div>
     </div>
 </a>
-    <a class="store__box--more" href="<?php the_permalink(); ?>">Подробнее</a></div>
+    <a class="store__box--more btn btn-primary" href="<?php the_permalink(); ?>">Подробнее</a></div>
     <?
 endwhile;
 }

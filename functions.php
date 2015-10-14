@@ -69,10 +69,8 @@ function excerpt_readmore($more) {
 }
 add_filter('excerpt_more', 'excerpt_readmore');
 
-
 if ( function_exists( 'add_theme_support' ) )
     add_theme_support( 'post-thumbnails' );
-
 
 add_action('admin_menu', 'admin_menu');
 
@@ -932,7 +930,7 @@ function set_order(){
     $address = $_POST['address'];
 
     $admin_email = get_option('admin_email');
-
+    //prn($admin_email);
     $items = explode(',',$_COOKIE['cartCookie']);
     //получаем количество одинаковых товаров
     $items = array_count_values($items);

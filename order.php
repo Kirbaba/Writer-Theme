@@ -1,4 +1,7 @@
 <?php
+$items = explode(',',$_COOKIE['cartCookie']);
+setcookie("cartCookie", "", time()+86400,'/');
+
 require($_SERVER['DOCUMENT_ROOT'].'/wp-load.php');
 
 get_header();
@@ -11,7 +14,7 @@ get_header();
 
 /* Источник: http://n-wp.ru/8295 */
 $mrh_login = "vgoidin";
-$mrh_pass1 = "123edcxzaqws";
+$mrh_pass1 = "12345qwert";
 
 $inv_id = generateNumber();
 
@@ -19,7 +22,7 @@ $inv_desc = "Оплата с сайта http://vgoidin.ru, E-mail: ".$_POST['ord
 
 $out_summ = $_POST['sum'];
 
-$is_test = 0;
+$is_test = 1;
 
 $shp_item = 1;
 
@@ -49,7 +52,7 @@ $crc  = md5("$mrh_login:$out_summ:$inv_id:$mrh_pass1:Shp_item=$shp_item");
     </div>
 </div>
 <?php
-$items = explode(',',$_COOKIE['cartCookie']);
+
 
 //получаем количество одинаковых товаров
 
